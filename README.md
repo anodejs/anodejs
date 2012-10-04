@@ -10,7 +10,7 @@ TODO
 
 # Setup ANODE farm
 
-* The 1st phase - [setup the most simple functional ANODE farm](https://github.com/anodejs/anodes/blob/master/docs/SIMPLE_SETUP.md)
-* The 2nd phase - [secure your farm](https://github.com/anodejs/anodes/blob/master/docs/SECURITY_SETUP.md)
-* The 3rd pahse - [start deploying applications](https://github.com/anodejs/anodes/blob/master/docs/APPREPO_SETUP.md)
+* The 1st phase - [setup the most simple functional ANODE farm](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md)
+* The 2nd phase - [secure your farm](https://github.com/anodejs/anodejs/blob/master/docs/SECURITY_SETUP.md)
+* The 3rd pahse - [start deploying applications](https://github.com/anodejs/anodejs/blob/master/docs/APPREPO_SETUP.md)
 
