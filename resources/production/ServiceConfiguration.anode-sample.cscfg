@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="anode" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="2" osVersion="*">
+  <Role name="anodejsrole">
+    <Instances count="2" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="" />
+      <Setting name="Git.user" value="myanodebuddy" />
+      <Setting name="Git.password" value="" />
+      <Setting name="Bootstrap.Origin" value="github.com/myanodeorg/bootstrap" />
+      <Setting name="Bootstrap.Branch" value="master" />
+      <Setting name="System.url" value="https://github.com/myanodeorg/system" />
+      <Setting name="Farm.url" value="https://bitbucket.org/myanodeorg/cluster#farm" />
+    </ConfigurationSettings>
+    <Certificates>
+    </Certificates>
+  </Role>
+</ServiceConfiguration>
