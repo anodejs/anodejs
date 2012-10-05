@@ -181,3 +181,14 @@ In Azure portal create new hosted service. Fill the form:
 
 Press ```OK``` and wait for all instances to be in state ```Ready```.
 
+## Configure deployment notifications
+
+Changes in repositories (ANODE system, cluster and application repositories) should trigger ANODE farm deployment. For each relevant repository configure notifications.
+
+### Notifications from github
+
+In the repository go to ```Admin``` section. Use ```Service Hooks``` option. In ```WebHook URLs``` add URL for your farm. Assuming URL prefix chosen for your farm was ```myanodefarm```, the URL to be set here will be http://myanodefarm.cloudapp.net/deploy.sys/github?$bcast
+
+### Notifications from bitbucket
+
+In the repository go to ```Admin``` section. Use ```Services``` option. Select ```POST``` service and fill URL for your farm. Assuming URL prefix chosen for your farm was ```myanodefarm```, the URL to be set here will be http://myanodefarm.cloudapp.net/deploy.sys/bitbucket?$bcast
