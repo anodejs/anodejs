@@ -126,7 +126,9 @@ If on bitbucket, go to ```Admin``` section and to ```Access Management```. Attac
 
 If private cluster repository was crated on github, add it to ```Readonly``` team.
 
-## Create Azure configuration for the farm
+## Prepare Azure deployment files
+
+### Azure configuration
 
 To create Azure deployment, you need Azure configuration file. Modify the template from https://github.com/anodejs/anodejs/blob/master/resources/production/ServiceConfiguration.anode-sample.cscfg with appropriate settings. The template looks like:
 
@@ -158,4 +160,24 @@ Those are parameters you may need to change:
 * Bootstrap.Branch - the branch of ANODE bootstrap repositry be be used for the farm. Leave it ```master```.
 * System.url - URL for your ANODE system repository. Shold point to ANODE system repository in your github ANODE organization.
 * Farm.url - URL for the branch dedicated for your farm in the cluster repository you've created. It is made of URL to the cluster repository, pound symbol and the name of the branch.
+
+### Azure package
+
+Download Azure package for ANODE from https://github.com/anodejs/anodejs/blob/master/resources/production/anode.cspkg
+
+You may prefer to clone this repository (https://github.com/anodejs/anodejs) to your development machine to have all the resources locally.
+
+## Start the farm
+
+### Create Azure hosted service and deployment for your new farm
+
+In Azure portal create new hosted service. Fill the form:
+* URL prefix - your farm name. Better be as the name specified in ```farm.json``` above (e.g. ```myanodefarm``` as referred in this manual)
+* Name for the service - use the same name as URL prefix (not must, but easier to manage).
+* Choose region where you want to place this ANODE farm.
+* In ```Deployment options``` specify ```Deploy to production environment```
+* In ```Package location``` browse to the location of ANODE package file, you've downloaded from this repository.
+* In ```Configuration file``` browse to the configuration file you've created for the farm.
+
+Press ```OK``` and wait for all instances to be in state ```Ready```.
 
