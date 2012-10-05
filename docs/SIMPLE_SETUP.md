@@ -55,4 +55,67 @@ Fork two ANODE repositories to your github organization. The repositories are:
 
 ### Important note for early adopters (remove after system and bootstrap made public)
 
-As long as system and bootstrap repositories are private, the forked repositories remmain private as well. You should add forked repositories to your github ```Readonly``` team. I am not sure if it will work, given you are not administrators of ```anodejs``` team, which owns parent private repositores. I hope it will not work, meaning, it will not allow granting read permisions to repositories own by ```anodejs```. Talk to me (yosefd@microsoft.com) and we will figure out how to let your buddy account to access these repositories (pobably you will have to make me or othee ```anodejs``` owner, coowner of your ANODE organization).
+As long as system and bootstrap repositories are private, the forked repositories remmain private as well. You should add forked repositories to your github ```Readonly``` team. I am not sure if it will work, given you are not administrators of ```anodejs``` team, which owns parent private repositores. I hope it will not work, meaning, it will not allow granting read permisions to repositories own by ```anodejs```. Talk to me (yosefd@microsoft.com) and we will figure out how to let your buddy account to access these repositories (pobably you will have to make me or other ```anodejs``` owner, coowner of your ANODE organization).
+
+## Create ANODE cluster configuration
+
+ANODE cluster configuration is kept in special private cluster repository. This repository doesn't include any code, just configuration parameters for your cluster farms.
+
+Cluster repository has to be private as it includes various secrets: Azure storage account key and certificates keys.
+
+Each farm in your cluster should have a branch on cluster repository. ```master``` branch of the cluster repository is reserved for development environment (consider you development machine as another farm in your ANODE cluster).
+
+You can refer to a template of cluster repository at https://github.com/anodejs/sample-cluster
+
+### Setup private cluster repository
+
+Create private repository in your github organization or bitbucket team. You can call it ```cluster```.
+
+Create branch for your farm. Let's assume you have called it ```farm```. 
+
+Create ```rebus``` directory and place 3 json files in it:
+* deploy.json
+* farm.json
+* log.json
+
+Your ```farm``` branch of ```cluster``` repository will look just like https://github.com/anodejs/sample-cluster/tree/farm
+
+#### Update ```farm.json```
+
+In this file you should configure the name to be used with your farm and azure storage account. The sample file looks like:
+
+```javascript
+{
+  "name": "myanodefarm",
+  "workersDisabled": false,
+  "rootDomain": null,
+  "azureStorage": {
+    "account" : {
+      "name" : "myanodestorage",
+      "key" : "myanodestorageprimarykey"
+    }
+  }
+}
+```
+
+Fill the real name of your farm, Azure storage account name and they key.
+
+#### Other JSON configuraiton files
+
+At the moment, there is no need to modify ```deploy.json``` and ```log.json```. They can remain as shown in the sample.
+
+```deploy.json```:
+```javascript
+{
+  "namespaces": {}
+}
+```
+
+```log.json```:
+```javascript
+[
+  {"name": "azuretable", "write" : true, "default": true}
+]
+```
+
+You will find in more advanced manuals how to manage these settings.
