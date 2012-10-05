@@ -192,3 +192,13 @@ In the repository go to ```Admin``` section. Use ```Service Hooks``` option. In 
 ### Notifications from bitbucket
 
 In the repository go to ```Admin``` section. Use ```Services``` option. Select ```POST``` service and fill URL for your farm. Assuming URL prefix chosen for your farm was ```myanodefarm```, the URL to be set here will be http://myanodefarm.cloudapp.net/deploy.sys/bitbucket?$bcast
+
+## Try it
+
+Your farm is now up and running. Access farm's dashboard with farm's URL. In this example, going to myanodefarm.cloudapp.net will lead you to the dashboard.
+
+Notice command line at the bottom of your browser window. Type ```help``` to get the list of supported commands. ```man``` command will show you some manuals for ANODE dashboard.
+
+Try ```log``` command to see the latest logs from the farm.
+
+[Continue to follow ANODE farm setup manual for more advanced steps](https://github.com/anodejs/anodejs#setup-anode-farm)
