@@ -105,6 +105,7 @@ Fill the real name of your farm, Azure storage account name and they key.
 At the moment, there is no need to modify ```deploy.json``` and ```log.json```. They can remain as shown in the sample.
 
 ```deploy.json```:
+
 ```javascript
 {
   "namespaces": {}
@@ -112,6 +113,7 @@ At the moment, there is no need to modify ```deploy.json``` and ```log.json```. 
 ```
 
 ```log.json```:
+
 ```javascript
 [
   {"name": "azuretable", "write" : true, "default": true}
