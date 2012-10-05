@@ -22,7 +22,7 @@ Let's assume your domain is ```myservice.net```. You also have certificate. Let'
 
 #### Configure DNS
 
-Create DNS CNAME record to resolve your domain as ```myanodefarm.cloudapp.net```.
+Create DNS CNAME record to resolve your domain as ```myanodefarm.cloudapp.net```. You need to create CNAMEs for both ```myservice.net.``` and ```*.myservice.net.```
 
 #### Configure domain resolution
 
@@ -46,6 +46,8 @@ Your ```farm.json``` file may look like:
 }
 ```
 
+Push the change into origin. Reboot instances of your farm.
+
 You can now access dashboard on your farm via ```myservice.net```.
 
 #### Extract service PEM files
@@ -56,3 +58,22 @@ With ```openssl``` tool extract private and public keys of your certificate:
 $ openssl pkcs12 -in myservice.pfx -out public.pem –nokeys
 $ openssl pkcs12 -in myservice.pfx -out private.pem -nocerts -nodes
 ```
+
+## Option: create self-signed server certificate
+
+If you don't want to acquire domain (can always do this later), you can secure your farm with self-signed certificates. Browsers will warn you on non-trusted certificates, but if you ingore warning you will be still able to access the farm via HTTPS.
+
+Create self-signed certificates with ```openssl``` tool.
+
+```bash
+$ openssl genrsa -out private.pem 1024
+openssl req -new -x509 -key private.pem -out public.pem -days 3660
+```
+
+## Setup server certificates
+
+In farm branch of your cluster repository, create directory ```certs```. Create sub-directory ```inter``` in ```certs``` directory. Copy ```private.pem``` and ```public.pem``` you have obtained in the privous sections into ```inter``` subdirectory.
+
+Push the changes into origin. Reboot instances of your farm.
+
+Now, when you access your farm secured applications, you get automatically redirected to HTTPS. Notice, that all system applications, including dashboard, are secured.
