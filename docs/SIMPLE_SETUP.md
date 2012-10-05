@@ -150,3 +150,12 @@ To create Azure deployment, you need Azure configuration file. Modify the templa
 </ServiceConfiguration>
 ```
 
+Those are parameters you may need to change:
+* Instances - the number of instances (virtual machines).
+* Git.user - the name of buddy account you've created on github and bitbucket (should be the same name on both).
+* Git.password - the password of buddy account on github and bitbucket (should be the same password on both).
+* Bootstrap.Origin - the name of ANODE bootstrap repository to be used for the farm. It should be ANODE bootstrap repository from your anode organization.
+* Bootstrap.Branch - the branch of ANODE bootstrap repositry be be used for the farm. Leave it ```master```.
+* System.url - URL for your ANODE system repository. Shold point to ANODE system repository in your github ANODE organization.
+* Farm.url - URL for the branch dedicated for your farm in the cluster repository you've created. It is made of URL to the cluster repository, pound symbol and the name of the branch.
+
