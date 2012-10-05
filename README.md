@@ -8,6 +8,10 @@ TODO
 * Instance - Azure instance (aka VM). We use "Small" sized instances.
 * ANODE cluster - Set of several ANODE farms, which share common account storage.
 
+## Prerequisites
+
+You need Git be installed on your development computer. Follow the [following steps](https://help.github.com/articles/set-up-git) if you don't have Git yet.
+
 # Setup ANODE farm
 
 * The 1st phase - [setup the most simple functional ANODE farm](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md)

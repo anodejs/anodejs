@@ -88,7 +88,6 @@ In this file you should configure the name to be used with your farm and azure s
 {
   "name": "myanodefarm",
   "workersDisabled": false,
-  "rootDomain": null,
   "azureStorage": {
     "account" : {
       "name" : "myanodestorage",
