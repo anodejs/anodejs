@@ -47,7 +47,7 @@ As the owner of the team you can manage members. Take care you have there groups
 * ```Developers``` - setup write permissions and optionally rights to create repositories (depends on policies you want to apply).
 * ```Readonly``` - only read permissions. Add buddy account to this group.
 
-## Get ANODE repositories
+## Fork ANODE repositories
 
 Fork two ANODE repositories to your github organization. The repositories are:
 * https://github.com/anodejs/system
@@ -119,3 +119,34 @@ log.json:
 ```
 
 You will find in more advanced manuals how to manage these settings.
+
+#### Setup permissions for cluster repository
+
+If on bitbucket, go to ```Admin``` section and to ```Access Management```. Attached all groups you've created: ```Owners```, ```Developers```` and ```Readonly```.
+
+If private cluster repository was crated on github, add it to ```Readonly``` team.
+
+## Create Azure configuration for the farm
+
+To create Azure deployment, you need Azure configuration file. Modify the template from https://github.com/anodejs/anodejs/blob/master/resources/production/ServiceConfiguration.anode-sample.cscfg with appropriate settings. The template looks like:
+
+```xml
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="anode" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="2" osVersion="*">
+  <Role name="anodejsrole">
+    <Instances count="2" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="" />
+      <Setting name="Git.user" value="myanodebuddy" />
+      <Setting name="Git.password" value="" />
+      <Setting name="Bootstrap.Origin" value="github.com/myanodeorg/bootstrap" />
+      <Setting name="Bootstrap.Branch" value="master" />
+      <Setting name="System.url" value="https://github.com/myanodeorg/system" />
+      <Setting name="Farm.url" value="https://bitbucket.org/myanodeorg/cluster#farm" />
+    </ConfigurationSettings>
+    <Certificates>
+    </Certificates>
+  </Role>
+</ServiceConfiguration>
+```
+
