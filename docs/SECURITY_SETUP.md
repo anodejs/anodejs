@@ -100,4 +100,4 @@ Push the changes into origin. Reboot instances of your farm.
 
 Now, when you access dashboard on your farm, you are offered by the browser to authenticate using installed client certificate. Confirm it and you will get access to the dashboard. Whoever doesn't have the certificate installed, will not be able to access private applications on your farm, including the dashboard.
 
-In the following sections of ANODE manual you will see how to deploy application repositories and how to configure applications to be private or public.
+In the [following sections of ANODE setup manual](https://github.com/anodejs/anodejs#setup-anode-farm) you will see how to deploy application repositories.
