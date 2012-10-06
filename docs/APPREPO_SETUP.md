@@ -58,6 +58,8 @@ srv.get('/', function(req, res) {
 });
 ```
 
+Notice that the only interface with ANODE in application is referring to environment variable ```PORT```. This variable is set by ANODE. The application is written in a way that allows it to run independently of ANODE. In case ```PORT``` is not defined, the application listens on local host port 5000.
+
 ANODE system reserves name ```aaa.rrr``` for your application.
 
 Commit and push the changes to the origin.
@@ -67,3 +69,5 @@ Use ```deploy status``` command of ANODE dashboard to see how fast your applicat
 Try to access your application. In our example the application can be reached via https://aaa.rrr.myservice.net (if you have the domain ```myservice.com``` configured for the farm). If you don't have associated domain, you can reach the application as https://myanodefarm.cloudapp.net/aaa.rrr
 
 NOTE: Notice that you didn't have to install ```express``` node module in your repository, though your application uses it successfully. This works since ANODE comes with many popular node modules it uses by itself (```async```, ```express```, ```connect``` and ```request```, to mention a few). You can examine the full list in ```node_modules``` directory of the system repository.
+
+NOTE: Nothing prevents from creating ANODE application in the application repository root. For example, if ```index.js``` file is placed in the application repository ```rrr``` root, it will define application that can be accessed as https://rrr.myservice.net or https://myanodefarm.cloudapp.net/rrr
