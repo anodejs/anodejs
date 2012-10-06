@@ -35,3 +35,5 @@ You need Git be installed on your development computer. Follow the [following st
 * The 3rd phase - [start deploying applications](https://github.com/anodejs/anodejs/blob/master/docs/APPREPO_SETUP.md)
 * The 4th phase - [setup development environment](https://github.com/anodejs/anodejs/blob/master/docs/DEVENV_SETUP.md)
 * [Troubleshooting](https://github.com/anodejs/anodejs/blob/master/docs/TROUBLESHOOTING_SETUP.md)
+
+# [Reference](https://github.com/anodejs/anodejs/blob/master/docs/REFERENCE.md)
