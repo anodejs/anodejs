@@ -28,7 +28,7 @@ Copy empty deployment settings from https://github.com/anodejs/sample-cluster/bl
 
 On the development environment, deployment is not invoked. Instead, developers setup ANODE repositories themselves.
 
-## Setup logging configuration.
+## Setup logging configuration
 
 Copy development environment logging configuration from https://github.com/anodejs/sample-cluster/blob/master/rebus/log.json to ```rebus``` directory of the ```master``` branch of the cluster repository. 
 
