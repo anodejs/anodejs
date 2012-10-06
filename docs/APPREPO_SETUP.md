@@ -19,7 +19,7 @@ Setup permissions by adding the repository into ```Developers``` and ```Readonly
 
 Like you've configured notifications for system and cluster repositories, you should configure notifications for all application repositories.
 
-Follow intractions [here](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#configure-deployment-notifications).
+Follow instructions [here](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#configure-deployment-notifications).
 
 ### Configure deployment
 
