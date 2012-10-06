@@ -14,7 +14,7 @@ In a nutshell, ANODE offers the following features:
 * Instantaneous logging - you can instantly view and query logs from applications.
 * Management dashboard - all management is performed via management dashboard offered by ANODE. The dashboard is extendable, so you can use it to manage applications.
 * Scaleout - ANODE symmetrically deploys your applications on Azure instances. Scaleout is opaque to application.
-* Interoperability - ANODE allows applications to collaborate with each other. ANODE itself is implemented as bunch of node.js applications.
+* Interoperability - ANODE allows applications to collaborate with each other. ANODE itself is implemented as a bunch of node.js applications.
 * Services - there are multiple services offered by ANODE, e.g. scheduling delayed jobs.
 * Testing - support development and execution of test suites on ANODE farm.
 
