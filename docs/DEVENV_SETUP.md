@@ -60,7 +60,7 @@ Since deployment service is not invoked automatically on development environment
 
 ```
 C:\anode\__system\cli>compile __system rrr
-``
+```
 
 ## Start ANODE on development computer
 
