@@ -1,6 +1,6 @@
 # Introduction
 
-While it is possible now to run applications on the real cloud, it would be nice to have the option to run and debug them right on the development computer.
+While it is possible now to run ANODE applications on the real cloud, it would be nice to have an option to run and debug them on the development computer.
 
 ANODE can run on the development machine. It becomes just like another single instance farm in your cluster.
 
