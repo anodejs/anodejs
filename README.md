@@ -17,3 +17,4 @@ You need Git be installed on your development computer. Follow the [following st
 * The 1st phase - [setup the most simple functional ANODE farm](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md)
 * The 2nd phase - [secure your farm](https://github.com/anodejs/anodejs/blob/master/docs/SECURITY_SETUP.md)
 * The 3rd phase - [start deploying applications](https://github.com/anodejs/anodejs/blob/master/docs/APPREPO_SETUP.md)
+* [Troubleshooting](https://github.com/anodejs/anodejs/blob/master/docs/TROUBLESHOOTING_SETUP.md)
