@@ -16,7 +16,7 @@ In a nutshell, ANODE offers the following features:
 * Scaleout - ANODE symmetrically deploys your applications on Azure instances. Scaleout is opaque to application.
 * Interoperability - ANODE allows applications to collaborate with each other. ANODE itself is implemented as a bunch of node.js applications.
 * Services - there are multiple services offered by ANODE, e.g. scheduling delayed jobs.
-* Testing - support development and execution of test suites on ANODE farm.
+* Testing - support test suites development and execution.
 
 ## Terminology
 
