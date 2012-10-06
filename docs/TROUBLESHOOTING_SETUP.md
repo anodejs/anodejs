@@ -2,7 +2,7 @@
 
 Github and bitbucket send notification of changes in repositories. Sometimes these sites may fault. We find bitbucket somewhat less reliable and recommend github as the site of choice to host your repositories.
 
-If after change you don't see your change, check with ```deploy status``` command of the dashboard. If you see deployment wasn't triggered, you can trigger it manually via ```deploy``` command. See ```help deploy``` for list of options of the command and specifically ```help deploy now!``` for details about deployment trigger.
+If following push you don't see your change picked up by the farm, check the deployment status by using ```deploy status``` command of the dashboard. If you see deployment wasn't triggered, you can trigger it manually via ```deploy``` command. See ```help deploy``` for list of options of the command and specifically ```help deploy now!``` for details about deployment trigger.
 
 For example, to trigger synchronization of cluster repository you may issue command like:
 
