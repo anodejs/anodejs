@@ -1,28 +1,28 @@
 # Introduction
 
-After basic setup ANODE farm is not secured. Anybody can access any application running on the farm, including system applications. Anybody can access farm's dashboard.
+After basic setup ANODE the farm is not secured. Anybody can access any application running on the farm, including system applications. Anybody can access farm's dashboard.
 
 Also, all applications are exposed via HTTP.
 
-The following steps will secure your ANODE farm. HTTPS will be enabled. Applications configured to be exposed only via HTTPS will do so. This includes all system applications, including the dashboard.
+The following steps will secure the farm. HTTPS will be enabled. Applications configured to be exposed only via HTTPS will do so. This includes all system applications, especially the dashboard.
 
-In addition, access to restricted (aka private) applications will be granted only to farm developers, who will authenticate with client certificate.
+In addition, access to restricted (aka private) applications will be granted only to farm developers, who authenticate with client certificate distributed by the administrator (you).
 
 # Setup steps
 
 ## Obtain domain name and server certificate
 
-It is recommended to purchase domain name for your farm. With the domain name you will get your service certificate.
+It is recommended to purchase domain name for the farm. With the domain name you recieve service certificate.
 
 Domain name is optional. You can continue and take care of security without properly signed server certificate. Skip the next session if you want to postpone domain configuration.
 
 ### Configuring domain
 
-Let's assume your domain is ```myservice.net```. You also have certificate. Let's assume you have myservice.pfx file.
+Let's assume your domain is ```myservice.net```. Let's also assume the certicate for services in this domain is myservice.pfx.
 
 #### Configure DNS
 
-Create DNS CNAME record to resolve your domain as ```myanodefarm.cloudapp.net```. You need to create CNAMEs for both ```myservice.net.``` and ```*.myservice.net.```
+Create DNS CNAME records to resolve the domain as ```myanodefarm.cloudapp.net```. You need to create CNAMEs for both ```myservice.net.``` and ```*.myservice.net.```
 
 #### Configure domain resolution
 
