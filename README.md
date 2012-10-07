@@ -12,11 +12,11 @@ In a nutshell, ANODE offers the following features:
 * Instantaneous deployment - push into git leads to immediate service update in the cloud. ANODE is integrated with github (and bitbucket), supports and leverages github development process.
 * Security - ANODE wraps all security handling and exposes HTTPS endpoint. ANODE applications are HTTP servers, agnostic of security.
 * Instantaneous logging - ANODE offers instant viewing and querying logs from applications.
-* Management dashboard - all management is performed via management dashboard offered by ANODE. The dashboard is extendable, so you can use it to manage applications.
-* Scaleout - ANODE symmetrically deploys your applications on Azure instances. Scaleout is opaque to application.
-* Interoperability - ANODE allows applications to collaborate with each other. ANODE itself is implemented as a bunch of node.js applications.
+* Management dashboard - all management is performed via ANODE's management dashboard. The dashboard is extendable and can be used for managing applications.
+* Scale out - ANODE symmetrically deploys applications on Azure instances. Scaleout is opaque to applications.
+* Interoperability - ANODE allows applications to collaborate with each other. ANODE itself is implemented as a number of node.js applications.
 * Services - there are multiple services offered by ANODE, e.g. scheduling delayed jobs.
-* Testing - support test suites development and execution.
+* Testing - ANODE supports test suites development and execution.
 
 ## Terminology
 
