@@ -12,25 +12,25 @@ If you don't have Azure subscription, you can create one. For evaluation purpose
 
 ### Create storage account for your ANODE cluster
 
-Go to Azure portal and login with your LiveId, which own Azure subscription. Navigate to storage accounts and create storage account for your ANODE cluster. You can choose any name for this storage account. Let's assume you've called it ```myanodestorage```. The information we will have to take from here is the account primary access key. It is a long string you can copy from the portal.
+Go to Azure portal and login with your LiveId, which owns Azure subscription. Navigate to storage accounts and create storage account for your ANODE cluster. You can choose any name for this storage account. Let's assume you've called it ```myanodestorage```. The information we will have to take from here is the account primary access key. It is a long string you can copy from the portal.
 
 ## Setup git
 
 You will host ANODE and your applications in github repositories.
 
-You will also need private git space, where you will keep ANODE secrets. For this purpose you can use github private repository. However, on github, private repository cannot be created by free account. As an alternative you can use bitbucket to host private git repository (or repositories, if you will need private application repositories).
+You will also need private git space, where you will keep ANODE secrets. For this purpose you can use github private repository. However, on github, private repository cannot be created in a free account. As an alternative you can use bitbucket to host private git repository (or repositories, if you will need private application repositories).
 
-If you don't have github account, create one (at https://github.com). If you have only free github account and you cannot create private repositories on github, you will also need account on bitbucket (https://bitbucket.org).
+If you don't have github account, create one (on https://github.com). If you have only free github account and you cannot create private repositories on github, you will also need account on bitbucket (https://bitbucket.org).
 
 ### Create buddy account
 
-Create new github account that will be used you your ANODE farm to pull sources. Let's assume you've called it ```myanodebuddy```.
+Create new github account to be used by ANODE farm to pull sources. Let's assume you've called it ```myanodebuddy```.
 
 If you cannot create private repositories on github, create buddy account on bitbucket as well. You should use the same name and the same password for this buddy account.
 
 ### Setup github organization
 
-Now you can setup new organization. You will need the organization to manage permissions for developers collaborating in building applications on your ANODE deployment.
+Github organization is useful for managing permissions for developers collaborating in building applications on your ANODE deployment.
 
 Let's assume you've called the organization ```myanodeorg```. You already have predefined team called ```Owners```. You are the only member.
 
