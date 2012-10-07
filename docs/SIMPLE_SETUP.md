@@ -35,16 +35,16 @@ Github organization is useful for managing permissions for developers collaborat
 Let's assume you've called the organization ```myanodeorg```. You already have predefined team called ```Owners```. You are the only member.
 
 Crate two more teams:
-* ```Developers``` - set push&pull permissions. Later, you will include accounts of your developers and application repositories you will create.
-* ```Readonly``` - set pull permissions only. Add buddy account here. Later you will add private repositories here, if any.
+* ```Developers``` - set push&pull permissions. Later, it will include developers' accounts and application repositories.
+* ```Readonly``` - set pull permissions only. Add buddy account here. Later can be used for private repositories, if any.
 
 ### Setup bitbucket team (if needed)
 
-If you are using bitbucket for private repositories, you need to create complimentary bitbucket team. Let's assume you've called it by the same name ad your github organization - ```myanodeorg```.
+If you are using bitbucket for private repositories, you need to create complimentary bitbucket team. Let's assume you've called it by the same name aa github organization - ```myanodeorg```.
 
-As the owner of the team you can manage members. Take care you have three groups in the team (complimentary to what you have on github):
-* ```Owners``` - rename existing admin team (not must, just for sake of common terminology between two sites).
-* ```Developers``` - setup write permissions and optionally rights to create repositories (depends on policies you want to apply).
+As the owner of the team you can manage members. Create three groups in the team (complimentary to what you have on github):
+* ```Owners``` - rename existing admin team (not must, just for sake of common terminology between the two sites).
+* ```Developers``` - setup write permissions and optionally allow creating repositories (depends on policies you want to apply).
 * ```Readonly``` - only read permissions. Add buddy account to this group.
 
 ## Fork ANODE repositories
@@ -53,9 +53,9 @@ Fork two ANODE repositories to your github organization. The repositories are:
 * https://github.com/anodejs/system
 * https://github.com/anodejs/bootstrap
 
-### Important note for early adopters (remove after system and bootstrap made public)
+### Important note for early adopters (remove this section after system and bootstrap made public)
 
-As long as system and bootstrap repositories are private, the forked repositories remain private as well. You should add forked repositories to your github ```Readonly``` team. I am not sure if it will work, given you are not administrators of ```anodejs``` team, which owns parent private repositories. I hope it will not work, meaning, it will not allow granting read permissions to repositories own by ```anodejs```. Talk to me (yosefd@microsoft.com) and we will figure out how to let your buddy account to access these repositories (probably you will have to make me or other ```anodejs``` owner, co-owner of your ANODE organization).
+As long as system and bootstrap repositories are private, the forked repositories remain private as well. You should add forked repositories to your github ```Readonly``` team, which grants read permissions to buddy account. I am not sure if it will work, given you are not administrators of ```anodejs``` team, which owns parent private repositories. I hope it will not work, meaning, it will not allow granting read permissions to repositories owned by ```anodejs```. Talk to me (yosefd@microsoft.com) and we will figure out how to let your buddy account to access these repositories (probably can be solved by adding one ```anodejs``` owner as co-owner of your ANODE organization).
 
 ## Create ANODE cluster configuration
 
