@@ -22,11 +22,11 @@ In a nutshell, ANODE offers the following features:
 
 * ANODE farm - Azure cloud service with one production deployment of ANODE role running on several instances.
 * Instance - Azure instance (aka VM). We use "Small" sized instances.
-* ANODE cluster - Set of several ANODE farms, which share common account storage.
+* ANODE cluster - Set of several ANODE farms sharing common storage account.
 
 ## Prerequisites
 
-You need Git be installed on your development computer. Follow the [following steps](https://help.github.com/articles/set-up-git) if you don't have Git yet.
+You need Git to be installed on your development computer. Follow the [these steps](https://help.github.com/articles/set-up-git) if you don't have Git yet.
 
 # Setup ANODE farm
 
