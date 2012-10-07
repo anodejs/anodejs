@@ -59,13 +59,13 @@ As long as system and bootstrap repositories are private, the forked repositorie
 
 ## Create ANODE cluster configuration
 
-ANODE cluster configuration is kept in special private cluster repository. This repository doesn't include any code, just configuration parameters for your cluster farms.
+ANODE cluster configuration is kept in private cluster repository. This repository doesn't include any code, just configuration parameters for cluster's farms.
 
 Cluster repository has to be private as it includes various secrets: Azure storage account key and certificates keys.
 
-Each farm in your cluster should have a branch on cluster repository. ```master``` branch of the cluster repository is reserved for development environment (consider you development machine as another farm in your ANODE cluster).
+Each farm in the cluster should have a branch in the cluster repository. ```master``` branch is reserved for development environment (consider developer's computer as another farm in ANODE cluster).
 
-You can refer to a template of cluster repository at https://github.com/anodejs/sample-cluster
+Refer to the template of cluster repository at https://github.com/anodejs/sample-cluster
 
 ### Setup private cluster repository
 
