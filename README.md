@@ -8,10 +8,10 @@ ANODE is available as free open source in github. You can clone all ANODE code a
 
 In a nutshell, ANODE offers the following features:
 
-* Multitenancy - you can host multiple versions of multiple applications, from git repositories and branches, side-by-side.
+* Multitenancy - ANODE hosts multiple versions of multiple applications, from git repositories and branches, side-by-side.
 * Instantaneous deployment - push into git leads to immediate service update in the cloud. ANODE is integrated with github (and bitbucket), supports and leverages github development process.
-* Security - ANODE wraps all security handling and is responsible for HTTPS termination.
-* Instantaneous logging - you can instantly view and query logs from applications.
+* Security - ANODE wraps all security handling and exposes HTTPS endpoint. ANODE applications are HTTP servers, agnostic of security.
+* Instantaneous logging - ANODE offers instant viewing and querying logs from applications.
 * Management dashboard - all management is performed via management dashboard offered by ANODE. The dashboard is extendable, so you can use it to manage applications.
 * Scaleout - ANODE symmetrically deploys your applications on Azure instances. Scaleout is opaque to application.
 * Interoperability - ANODE allows applications to collaborate with each other. ANODE itself is implemented as a bunch of node.js applications.
