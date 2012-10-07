@@ -82,7 +82,7 @@ Create ```rebus``` directory and place 3 json files in it:
 
 #### Update ```farm.json```
 
-Configure the name to be used with the farm and azure storage account. The file would look like:
+The file would look like:
 
 ```javascript
 {
@@ -116,8 +116,6 @@ log.json:
   {"name": "azuretable", "write" : true, "default": true}
 ]
 ```
-
-You will find in more advanced manuals how to manage these settings.
 
 #### Setup permissions for cluster repository
 
