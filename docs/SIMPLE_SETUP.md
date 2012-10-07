@@ -119,7 +119,7 @@ log.json:
 
 #### Setup permissions for cluster repository
 
-If on bitbucket, go to ```Admin``` section and to ```Access Management```. Attached all groups you've created: ```Owners```, ```Developers```` and ```Readonly```.
+If on bitbucket, go to ```Admin``` section and to ```Access Management```. Attach cluster repository to all groups you've created: ```Owners```, ```Developers``` and ```Readonly```.
 
 If private cluster repository was crated on github, add it to ```Readonly``` team.
 
@@ -127,7 +127,7 @@ If private cluster repository was crated on github, add it to ```Readonly``` tea
 
 ### Azure configuration
 
-To create Azure deployment, you need Azure configuration file. Modify the template from https://github.com/anodejs/anodejs/blob/master/resources/production/ServiceConfiguration.anode-sample.cscfg with appropriate settings. The template looks like:
+Modify the template from https://github.com/anodejs/anodejs/blob/master/resources/production/ServiceConfiguration.anode-sample.cscfg with appropriate settings. The template looks like:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -149,52 +149,52 @@ To create Azure deployment, you need Azure configuration file. Modify the templa
 </ServiceConfiguration>
 ```
 
-Those are parameters you may need to change:
+Those are parameters you need to change:
 * Instances - the number of instances (virtual machines).
-* Git.user - the name of buddy account you've created on github and bitbucket (should be the same name on both).
-* Git.password - the password of buddy account on github and bitbucket (should be the same password on both). __IMPORTANT__: The user and the password should be URL encoded (e.g. '$' is '%24').
-* Bootstrap.Origin - the name of ANODE bootstrap repository to be used for the farm. It should be ANODE bootstrap repository from your anode organization.
+* Git.user - the name of buddy account on github and bitbucket (should be the same name for both).
+* Git.password - the password of buddy account on github and bitbucket (should be the same password for both). __IMPORTANT__: The user and the password should be URL encoded (e.g. '$' is '%24').
+* Bootstrap.Origin - the name of ANODE bootstrap repository to be used for the farm. Change the organization name.
 * Bootstrap.Branch - the branch of ANODE bootstrap repository be used for the farm. Leave it ```master```.
-* System.url - URL for your ANODE system repository. It should point to ANODE system repository in your github ANODE organization.
-* Farm.url - URL for the branch dedicated for your farm in the cluster repository you've created. It is made of URL to the cluster repository, pound symbol and the name of the branch.
+* System.url - URL for ANODE system repository. It should point to ANODE system repository in your github ANODE organization.
+* Farm.url - URL for the branch dedicated for the farm in the cluster repository. It is made of cluster repository URL, pound symbol and the name of the branch.
 
 ### Azure package
 
 Download Azure package for ANODE from https://github.com/anodejs/anodejs/blob/master/resources/production/anode.cspkg
 
-You may prefer to clone this repository (https://github.com/anodejs/anodejs) to your development machine to have all the resources locally.
+You may prefer to clone [anodejs repository](https://github.com/anodejs/anodejs) to the development machine to have all the resources locally.
 
 ## Start the farm
 
-### Create Azure hosted service and deployment for your new farm
+### Create Azure hosted service and deployment for the new farm
 
 In Azure portal create new hosted service. Fill the form:
-* URL prefix - your farm name. Better be as the name specified in ```farm.json``` above (e.g. ```myanodefarm``` as referred in this manual)
+* URL prefix - the farm name. Better be as the name specified in ```farm.json``` above (e.g. ```myanodefarm``` as referred in this manual)
 * Name for the service - use the same name as URL prefix (not must, but easier to manage).
-* Choose region where you want to place this ANODE farm.
+* Choose region where to place this ANODE farm.
 * In ```Deployment options``` specify ```Deploy to production environment```
-* In ```Package location``` browse to the location of ANODE package file, you've downloaded from this repository.
+* In ```Package location``` browse to the location of the downloaded ANODE package file.
 * In ```Configuration file``` browse to the configuration file you've created for the farm.
 
-Press ```OK``` and wait for all instances to be in state ```Ready```.
+Press ```OK``` and wait for all instances to be in the state ```Ready```.
 
 ## Configure deployment notifications
 
-Changes in repositories (ANODE system, cluster and application repositories) should trigger ANODE farm deployment. For each relevant repository configure notifications.
+Changes in repositories (system, cluster and application repositories) should trigger deployment to the farm. For each relevant repository configure notifications.
 
 ### Notifications from github
 
-In the repository, go to ```Admin``` section. Use ```Service Hooks``` option. In ```WebHook URLs``` add URL for your farm. Assuming URL prefix chosen for your farm was ```myanodefarm```, the URL to be set here will be http://myanodefarm.cloudapp.net/deploy.sys/github?$bcast
+In the repository, go to ```Admin``` section. Use ```Service Hooks``` option. In ```WebHook URLs``` add URL for the farm. Assuming URL prefix chosen for the farm was ```myanodefarm```, the URL to be set here will be http://myanodefarm.cloudapp.net/deploy.sys/github?$bcast
 
 ### Notifications from bitbucket
 
-In the repository, go to ```Admin``` section. Use ```Services``` option. Select ```POST``` service and fill URL for your farm. Assuming URL prefix chosen for your farm was ```myanodefarm```, the URL to be set here will be http://myanodefarm.cloudapp.net/deploy.sys/bitbucket?$bcast
+In the repository, go to ```Admin``` section. Use ```Services``` option. Select ```POST``` service and fill URL for the farm. Assuming URL prefix chosen for the farm was ```myanodefarm```, the URL to be set here will be http://myanodefarm.cloudapp.net/deploy.sys/bitbucket?$bcast
 
 ## Try it
 
-Your farm is now up and running. Access your farm dashboard via the farm's URL. In this example, going to myanodefarm.cloudapp.net will lead you to the dashboard.
+The farm is now up and running. Access farm's dashboard via the farm's URL. In this example, going to myanodefarm.cloudapp.net will lead you to the dashboard.
 
-Notice command line at the bottom of your browser window. Type ```help``` to get the list of supported commands. ```man``` command will show you some manuals for ANODE dashboard.
+Notice command line at the bottom of browser window. Type ```help``` to get the list of supported commands. ```man``` command shows manuals for ANODE dashboard.
 
 Try ```log``` command to see the latest logs from the farm.
 
