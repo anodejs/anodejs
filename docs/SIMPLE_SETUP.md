@@ -71,18 +71,18 @@ Refer to the template of cluster repository at https://github.com/anodejs/sample
 
 Create private repository in your github organization or bitbucket team. You can call it ```cluster```.
 
-Create branch for your farm. Let's assume you have called it ```farm```. 
+Create branch for the farm. Let's assume you have called it ```farm```. 
 
 Create ```rebus``` directory and place 3 json files in it:
 * deploy.json
 * farm.json
 * log.json
 
-Your ```farm``` branch of ```cluster``` repository will look just like https://github.com/anodejs/sample-cluster/tree/farm
+```farm``` branch of ```cluster``` repository will look just like https://github.com/anodejs/sample-cluster/tree/farm
 
 #### Update ```farm.json```
 
-In this file you should configure the name to be used with your farm and azure storage account. The sample file looks like:
+Configure the name to be used with the farm and azure storage account. The file would look like:
 
 ```javascript
 {
@@ -97,7 +97,7 @@ In this file you should configure the name to be used with your farm and azure s
 }
 ```
 
-Fill the real name of your farm, Azure storage account name and they key.
+Fill the the farm name (same as service URL prefix), Azure storage account name and the key.
 
 #### Other JSON configuration files
 
