@@ -26,11 +26,11 @@ Create DNS CNAME records to resolve the domain as ```myanodefarm.cloudapp.net```
 
 #### Configure domain resolution
 
-Go to farm's branch of your cluster repository. Modify ```farm.json``` in ```rebus``` directory by adding your domain name. The property should like: ```"domains": ["myservice.net"]```.
+Go to farm's branch of the cluster repository. Modify ```farm.json``` in ```rebus``` directory by adding domain name. The property should like: ```"domains": ["myservice.net"]```.
 
-It is possible to have multiple domains referring to your farm, e.g. ```"domains": ["myservice.net", "myservice.com"]```.
+It is possible to have multiple domains referring to the farm, e.g. ```"domains": ["myservice.net", "myservice.com"]```.
 
-Your ```farm.json``` file may look like:
+```farm.json``` file may look like:
 
 ```javascript
 {
@@ -46,13 +46,13 @@ Your ```farm.json``` file may look like:
 }
 ```
 
-Push the change into origin. Reboot instances of your farm.
+Push the change into origin. Reboot instances of the farm.
 
-You can now access dashboard on your farm via ```myservice.net```.
+You can now access farm's dashboard via ```myservice.net```.
 
 #### Extract service PEM files
 
-With ```openssl``` tool extract private and public keys of your certificate:
+With ```openssl``` tool extract private and public keys from the certificate:
 
 ```bash
 $ openssl pkcs12 -in myservice.pfx -out public.pem –nokeys
@@ -61,7 +61,7 @@ $ openssl pkcs12 -in myservice.pfx -out private.pem -nocerts -nodes
 
 ## Option: create self-signed server certificate
 
-If you don't want to acquire domain (can always do this later), you can secure your farm with self-signed certificates. Browsers will warn you on non-trusted certificates, but if you ignore warning you will be still able to access the farm via HTTPS.
+If you don't want to acquire domain (can always do this later), you can secure the farm with self-signed certificates. Browsers warn on non-trusted certificates, but if by ignoring the warning, it is possible to access the farm via HTTPS.
 
 Create self-signed certificates with ```openssl``` tool.
 
@@ -72,15 +72,15 @@ $ openssl req -new -x509 -key private.pem -out public.pem -days 3660
 
 ## Setup server certificates
 
-In farm branch of your cluster repository, create directory ```certs```. Create sub-directory ```inter``` in ```certs``` directory. Copy ```private.pem``` and ```public.pem``` you have obtained in the previous sections into ```inter``` subdirectory.
+In farm's branch of the cluster repository, create directory ```certs```. Create sub-directory ```inter``` in ```certs``` directory. Copy ```private.pem``` and ```public.pem``` into ```inter``` subdirectory.
 
-Push the changes into origin. Reboot instances of your farm.
+Push the changes into origin. Reboot instances of the farm.
 
-Now, when you access your farm secured applications, you get automatically redirected to HTTPS. Notice, that all system applications, including dashboard, are secured.
+Secured applications can now be accessed only via HTTPS. Notice, that all system applications, including dashboard, are secured.
 
 ## Setup client certificates
 
-To restrict access to private application, you have to install client certificate on your farm.
+To restrict access to private application, configure client certificate for the farm.
 
 Create self-signed client certificate
 
@@ -90,14 +90,14 @@ $ openssl req -new -x509 -key cc_private.pem -out cc_public.pem -days 3660
 $ openssl pkcs12 -export -inkey cc_private.pem -out cc.pfx -in cc_public.pem
 ```
 
-The last command asks you to create password for accessing the certificate.
+The last command asks to create password for accessing the certificate.
 
-The certificate ```cc.pfx``` should be distributed between your developers. You can put it in the cluster repository, as you grant access to this repository only to members of your organization. Ask developers to install this certificate on their computers, and of course do the same (double clicking PFX file will do the job).
+The certificate ```cc.pfx``` should be distributed between organization developers. Please it in the cluster repository, as you grant access to this repository only to members of the organization. Ask developers to install client certificate on their computers, and, of course, do the same (double clicking PFX file accomplishes the job).
 
 Copy ```cc_private.pem``` and ```cc_public.pem``` in ```inter``` subdirectory, next to server keys.
 
-Push the changes into origin. Reboot instances of your farm.
+Push the changes into origin. Reboot instances of the farm.
 
-Now, when you access dashboard on your farm, you are offered by the browser to authenticate using installed client certificate. Confirm it and you will get access to the dashboard. Whoever doesn't have the certificate installed, will not be able to access private applications on your farm, including the dashboard.
+Now, when you access dashboard on the farm, you are offered by the browser to authenticate, using installed client certificate. Confirm and get access to the dashboard. Whoever doesn't have the certificate installed, will not be able to access private applications (e.g. the dashboard) on the farm.
 
 In the [following sections of ANODE setup manual](https://github.com/anodejs/anodejs#setup-anode-farm) you will see how to deploy application repositories.
