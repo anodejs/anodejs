@@ -12,9 +12,9 @@ ANODE comes with RDP enabled package and sample certificate, which can be used f
 
 Download sample RDP certificate from https://github.com/anodejs/anodejs/blob/master/resources/rdpenabled/rdpforall.pfx
 
-In Azure portal add this certificate to certificates of the hosted service. The password for the sample certificate is Everyb0dyKnow$
+In Azure portal, add this certificate to certificates of the hosted service. The password for the sample certificate is ```Everyb0dyKnow$```
 
-Since the certificate is opened to everybody, switch to your own certificate as soon as possible (see following steps).
+Since the certificate is opened to everybody, switch to your own certificate as soon as possible, [as described later](https://github.com/anodejs/anodejs/blob/master/docs/RDP_SETUP.md#change-rdp-certificate-and-access-password).
 
 ### Prepare RDP enabled deployment configuration
 
@@ -37,7 +37,7 @@ Copy all these parameters into RDP enabled configuration file.
 
 ### Upgrade deployment to RDP enabled
 
-In Azure portal upgrade the deployment to RDP enabled. The RDP enabled package can be found at https://github.com/anodejs/anodejs/blob/master/resources/rdpenabled/anode.cspkg and you have the new configuration file ready.
+In Azure portal, upgrade the deployment to RDP enabled. The RDP enabled package can be found at https://github.com/anodejs/anodejs/blob/master/resources/rdpenabled/anode.cspkg and you have the new configuration file ready.
 
 ### Try RDP to instances
 
