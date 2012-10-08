@@ -2,17 +2,17 @@
 
 While it is possible now to run ANODE applications on the real cloud, it would be nice to have an option to run and debug them on the developer's computer.
 
-ANODE can run on the development machine. It becomes just like another single instance farm in your cluster.
+ANODE can run on the development machine. The last becomes just like another single instance farm in the cluster.
 
-In development environment you can execute all applications just like they are executed on Azure. You can also use ANODE dashboard running in development environment. Besides local debugging, development environment lets you to browse logs for other farms in your cluster, even if the farm itself is not accessible for some reason.
+In the development environment one can execute all applications just like they are executed on Azure. ANODE dashboard works in the development environment too. Besides local debugging, the development environment allows logs browsing for other farms in the cluster, even if these farms are not accessible for some reason.
 
 # Setup steps
 
-The master branch of the cluster repository bears settings for development environment. Set your current branch of the repository to ```master```.
+The master branch of the cluster repository bears settings for development environment. Set current branch of the cluster repository on the develoment machine to ```master```.
 
 ## Configure farm setting for development environment
 
-Your ```farms.json``` in ```rebus``` directory on the ```master``` branch of cluster repository should look like https://github.com/anodejs/sample-cluster/blob/master/rebus/farm.json
+```farms.json``` in ```rebus``` directory on the ```master``` branch of cluster repository should look like https://github.com/anodejs/sample-cluster/blob/master/rebus/farm.json
 
 Set Azure storage account name and keys.
 
