@@ -22,11 +22,11 @@ Follow instructions [here](https://github.com/anodejs/anodejs/blob/master/docs/S
 
 ### Configure deployment
 
-Add deployment rule for your new repository into ```deploy.json``` file in ```rebus``` directory on your farm branch of the cluster repository.
+Add deployment rule for the new repository into ```deploy.json``` file in ```rebus``` directory on the farm's branch of the cluster repository.
 
-Deployment system is very flexible. For demonstration here we are adding the most trivial rule that deploys your repository ```rrr``` in the namespace ```rrr```. The rule for such deployment is ```"rrr": "https://github.com/myanodeorg/rrr``` (assuming the repository was created in github).
+Deployment system is very flexible. For demonstration here we are adding the most trivial rule that deploys repository ```rrr``` in the namespace ```rrr```. The rule for such deployment is ```"rrr": "https://github.com/myanodeorg/rrr``` (assuming the repository was created in github).
 
-Your ```deploy.sys``` may look now like:
+```deploy.sys``` may look now like:
 
 ```javascript
 {
@@ -36,13 +36,13 @@ Your ```deploy.sys``` may look now like:
 }
 ```
 
-Push changes in farm branch of the cluster repository into origin. This will automatically kick deployment process.
+Push changes in farm's branch of the cluster repository into origin. This automatically kicks deployment process.
 
-On ANODE dashboard you can try command ```deploy status``` to see what happened. Command ```log -a deploy.sys``` will show logs from ANODE's deployment service.
+On ANODE dashboard try command ```deploy status``` to see what happened. Command ```log -a deploy.sys``` shows logs from ANODE's deployment service.
 
 ## Create ANODE application
 
-ANODE looks for files called ```index.js``` and considers them ANODE applications. For each ANODE application, ANODE creates entry in the name space. The name is derived from the path of the file relatively to the repository root.
+ANODE looks for files called ```index.js``` and considers them ANODE applications. For each ANODE application, ANODE creates entry in the name space. The name is derived from the relative path of the file in the repository.
 
 For example, lets create directory ```aaa``` in our repository and place ```index.js``` in it that looks like:
 
@@ -57,15 +57,15 @@ srv.get('/', function(req, res) {
 });
 ```
 
-Notice that the only interface with ANODE in application is referring to environment variable ```PORT```. This variable is set by ANODE. The application is written in a way that allows it to run independently of ANODE. In case ```PORT``` is not defined, the application listens on local host port 5000.
+Notice that the only interface with ANODE in application, is the referral to environment variable ```PORT```. This variable is set by ANODE. The application is written in a way that allows it to run independently of ANODE. In case ```PORT``` is not defined, the application listens on local port 5000.
 
-ANODE system reserves name ```aaa.rrr``` for your application.
+ANODE system reserves name ```aaa.rrr``` for this application.
 
 Commit and push the changes to the origin.
 
-Use ```deploy status``` command of ANODE dashboard to see how fast your application got deployed.
+Use ```deploy status``` command on ANODE dashboard to see how fast the application got deployed.
 
-Try to access your application. In our example the application can be reached via https://aaa.rrr.myservice.net (if you have the domain ```myservice.com``` configured for the farm). If you don't have associated domain, you can reach the application as https://myanodefarm.cloudapp.net/aaa.rrr
+Try to access the application. In our example the application can be reached via https://aaa.rrr.myservice.net (if the domain ```myservice.com``` [was assigned to the farm](https://github.com/anodejs/anodejs/blob/master/docs/SECURITY_SETUP.md#configure-domain-resolution)). If you don't have associated domain, you can reach the application as https://myanodefarm.cloudapp.net/aaa.rrr
 
 NOTE: Notice that you didn't have to install ```express``` node module in your repository, though your application uses it successfully. This works since ANODE comes with many popular node modules it uses by itself (```async```, ```express```, ```connect``` and ```request```, to mention a few). You can examine the full list in ```node_modules``` directory of the system repository.
 
