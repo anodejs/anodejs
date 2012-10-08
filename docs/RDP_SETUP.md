@@ -41,7 +41,7 @@ In Azure portal, upgrade the deployment. The RDP enabled package can be found at
 
 ### Try RDP to instances
 
-Upon upgrade completion, you should be able to RDP into Azure instances. The user name for RDP connection is admin, the password is Everyb0dyKnow$
+Upon upgrade completion, you should be able to RDP into Azure instances. The user name for RDP connection is ```admin```, the password is ```Everyb0dyKnow$```
 
 ## Change RDP certificate and access password
 
