@@ -28,3 +28,7 @@ Next time to trigger deployment of ```rrr``` manually you need to issue just thi
 ```
 deploy now! -r rrr
 ```
+
+### Connfiguring Remote Access
+
+If bootstap doesn't work, there is no way to understand what is going on, but to use RDP (Remote Access) to ANODE instances. To configure RDP follow [these steps](https://github.com/anodejs/anodejs/blob/master/docs/RDP_SETUP.md)
