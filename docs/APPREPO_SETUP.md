@@ -8,12 +8,11 @@ The farm is now working and it is secured. You can start deploying applications 
 
 ### Create repository
 
-Create repository in your github organization or in bitbucket team.
-Let's assume you have create repository named ```rrr```.
+Create repository in your github organization or in the bitbucket team. Let's assume you have created repository named ```rrr```.
 
 ### Setup permissions
 
-Setup permissions by adding the repository into ```Developers``` and ```Readonly``` teams you've created previously (this is github terminology; on bitbucket they are called groups).
+Setup permissions by adding the repository into ```Developers``` and ```Readonly``` teams [created previously](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#setup-github-organization) (this is github terminology; on bitbucket they are called groups).
 
 ### Configure notifications
 
