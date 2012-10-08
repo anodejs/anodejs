@@ -65,8 +65,8 @@ Commit and push the changes to the origin.
 
 Use ```deploy status``` command on ANODE dashboard to see how fast the application got deployed.
 
-Try to access the application. In our example the application can be reached via https://aaa.rrr.myservice.net (if the domain ```myservice.com``` [was assigned to the farm](https://github.com/anodejs/anodejs/blob/master/docs/SECURITY_SETUP.md#configure-domain-resolution)). If you don't have associated domain, you can reach the application as https://myanodefarm.cloudapp.net/aaa.rrr
+Try to access the application. In our example the application can be reached via https://aaa.rrr.myservice.net (if the domain ```myservice.com``` [was assigned to the farm](https://github.com/anodejs/anodejs/blob/master/docs/SECURITY_SETUP.md#configure-domain-resolution)). If there is no associated domain, the application can be readed as https://myanodefarm.cloudapp.net/aaa.rrr
 
-NOTE: Notice that you didn't have to install ```express``` node module in your repository, though your application uses it successfully. This works since ANODE comes with many popular node modules it uses by itself (```async```, ```express```, ```connect``` and ```request```, to mention a few). You can examine the full list in ```node_modules``` directory of the system repository.
+NOTE: Notice that you didn't have to install ```express``` node module in the application repository, though the application uses it. This works since ANODE comes with many popular node modules (```async```, ```express```, ```connect``` and ```request```, to mention a few). You can examine the full list in the [```node_modules``` directory of the system repository](https://github.com/anodejs/system/tree/master/node_modules).
 
 NOTE: Nothing prevents from creating ANODE application in the application repository root. For example, if ```index.js``` file is placed in the application repository ```rrr``` root, it will define application that can be accessed as https://rrr.myservice.net or https://myanodefarm.cloudapp.net/rrr
