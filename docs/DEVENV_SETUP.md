@@ -12,7 +12,7 @@ The master branch of the cluster repository bears settings for development envir
 
 ## Configure farm setting for development environment
 
-```farms.json``` in ```rebus``` directory on the ```master``` branch of cluster repository should look like https://github.com/anodejs/sample-cluster/blob/master/rebus/farm.json
+```farms.json``` in ```rebus``` directory on the ```master``` branch of cluster repository should look like https://github.com/anodejs/sample-cluster/blob/master/rebus/farm.json (don't forget to set Azure account like [here](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#update-farmjson), but not the farm name).
 
 Set Azure storage account name and keys.
 
