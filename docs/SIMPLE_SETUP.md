@@ -172,11 +172,11 @@ In Azure portal create new hosted service. Fill the form:
 * URL prefix - the farm name. Better be as the name specified in ```farm.json``` above (e.g. ```myanodefarm``` as referred in this manual)
 * Name for the service - use the same name as URL prefix (not must, but easier to manage).
 * Choose region where to place this ANODE farm.
-* In ```Deployment options``` specify ```Deploy to production environment```
+* In ```Deployment option``` (sometimes called ```Environment```) should be ```Production```. We don't use Azure ```Staging``` deployments.
 * In ```Package location``` browse to the location of the downloaded ANODE package file.
 * In ```Configuration file``` browse to the configuration file you've created for the farm.
 
-Press ```OK``` and wait for all instances to be in the state ```Ready```.
+Submit the form and wait for all instances to be in the state ```Ready```.
 
 ## Configure deployment notifications
 
