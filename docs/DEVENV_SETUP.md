@@ -50,7 +50,7 @@ Keep the current branch of the cluster repository to be ```master```. This branc
 
 ## Clone applications repositories
 
-Consult ANODE cluster administrator about deployment policy that governs the namespace reserved for application repositories. In most cases, application repositories are placed next to the system repository. For example, in this ANODE setup manual example, the application repository ```rrr``` should be cloned into ```c:\anode\rrr```
+Consult ANODE cluster administrator about deployment policy that governs the namespace reserved for application repositories. In most cases, application repositories are placed next to the system repository. For example, in [this ANODE setup manual example](https://github.com/anodejs/anodejs/blob/master/docs/APPREPO_SETUP.md#configure-deployment), the application repository ```rrr``` should be cloned into ```c:\anode\rrr```
 
 ## Create applications metadata
 
