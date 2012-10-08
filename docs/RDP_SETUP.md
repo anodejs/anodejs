@@ -22,7 +22,7 @@ Azure deployment configuration file used previously doesn't have RDP parameters.
 
 Copy all settings from the original configuration file, you've created [here](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#azure-configuration).
 
-These are the parameters configured then:
+These are the parameters configured then, and should be copied now:
 
 ```xml
 <Setting name="Git.user" value="myanodebuddy" />
@@ -35,9 +35,9 @@ These are the parameters configured then:
 
 Copy all these parameters into RDP enabled configuration file.
 
-### Upgrade deployment to RDP enabled
+### Upgrade deployment to RDP enabled version
 
-In Azure portal, upgrade the deployment to RDP enabled. The RDP enabled package can be found at https://github.com/anodejs/anodejs/blob/master/resources/rdpenabled/anode.cspkg and you have the new configuration file ready.
+In Azure portal, upgrade the deployment. The RDP enabled package can be found at https://github.com/anodejs/anodejs/blob/master/resources/rdpenabled/anode.cspkg. The configuraiton file was prepared in the [previous step](https://github.com/anodejs/anodejs/blob/master/docs/RDP_SETUP.md#prepare-rdp-enabled-deployment-configuration).
 
 ### Try RDP to instances
 
