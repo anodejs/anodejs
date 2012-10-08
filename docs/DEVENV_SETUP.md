@@ -14,13 +14,11 @@ The master branch of the cluster repository bears settings for development envir
 
 ```farms.json``` in ```rebus``` directory on the ```master``` branch of cluster repository should look like https://github.com/anodejs/sample-cluster/blob/master/rebus/farm.json (don't forget to set Azure account like [here](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#update-farmjson), but not the farm name).
 
-Set Azure storage account name and keys.
-
 Push changes to the origin.
 
 ## Setup emulated topology
 
-Copy topology configuration file ```topology.json``` from https://github.com/anodejs/sample-cluster/blob/master/rebus/topology.json to ```rebus``` directory of the ```master``` branch of the cluster repository. On Azure, this file is generated from Azure configuration. For development environment it should be present in the directory. The file emulates environment of a single instance of your emulated farm.
+Copy topology configuration file ```topology.json``` from https://github.com/anodejs/sample-cluster/blob/master/rebus/topology.json to ```rebus``` directory of the ```master``` branch of the cluster repository. On Azure, this file is generated from Azure configuration. For development environment it should be present in the directory. The file emulates environment of a single instance of the emulated farm.
 
 ## Setup empty deployment settings
 
@@ -32,27 +30,27 @@ On the development environment, deployment is not invoked. Instead, developers s
 
 Copy development environment logging configuration from https://github.com/anodejs/sample-cluster/blob/master/rebus/log.json to ```rebus``` directory of the ```master``` branch of the cluster repository. 
 
-In addition to Azure table logging transport, the configuration for development environment lists settings for the console transport, which lets you see logs live in console window.
+In addition to Azure table logging transport, the configuration for development environment lists settings for the console transport, which write the logs live, in the console window.
 
 # Developers guide
 
 By a few simple steps each developer can install ANODE on his development computer.
 
-While on Azure ANODE system takes care of automatic deployment in accordance to farm administrator settings, on developer's computer the computer owner himself plays the role of farm administrator. The deployment system is not invoked in development environment. The developer himself installs ANODE system and application repositories according to his/her needs.
+While on Azure, ANODE system takes care of automatic deployment in accordance to farm administrator settings, on developer's computer the computer owner himself plays the role of the farm administrator. The deployment system is not invoked in the development environment. The developer installs ANODE system and application repositories according to his/her needs.
 
 ## Clone repositories
 
 To execute ANODE on the local host, one needs to clone system and cluster repositories and to place them in a certain way next to each other.
 
-Create a directory for ANODE on your computer. Let's assume you chose it to be ```c:\anode```.
+Create a directory for ANODE. Let's assume you chose it to be ```c:\anode```.
 
-Clone ANODE system into ```__system``` directory. Clone the cluster repository into ```cluster``` directory. The naming of directories is important and it shouldn't be altered. 
+Clone ANODE system into ```__system``` directory. Clone the cluster repository into ```cluster``` directory. The naming of these directories is important and it shouldn't be altered. 
 
-Keep current branch of the cluster repository to be ```master```. This branch is reserved for development environment.
+Keep the current branch of the cluster repository to be ```master```. This branch is reserved for the development environment.
 
 ## Clone applications repositories
 
-Consult your ANODE administrator about deployment policy that governs the namespace reserved for application repositories. In most cases, application repositories are placed next to the system repository. For example, in our example, you will clone applicaiton repository ```rrr``` into ```c:\anode\rrr```
+Consult ANODE cluster administrator about deployment policy that governs the namespace reserved for application repositories. In most cases, application repositories are placed next to the system repository. For example, in this ANODE setup manual example, the application repository ```rrr``` should be cloned into ```c:\anode\rrr```
 
 ## Create applications metadata
 
