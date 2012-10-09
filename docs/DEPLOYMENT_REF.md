@@ -53,6 +53,10 @@ The rule above deploys all ```rrr``` repository branches ending with ```-d``` su
 
 Such rule creates policy that distinguishes between deployable and non-deployable branches. The name convention allows deploying new branches without ANODE administrator intervention. When new branch with ```-d``` suffix is created, it is automatically deployed on the farm in appropriate namespace.
 
+## Deployment configuration update
+
+Deployment configuration can be changed on-the-fly. Push into farm's branch on origin triggers [notification](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#configure-deployment-notifications). The deployment system responds by switching to the updated deployment configuration.
+
 ## Example
 
 Putting all together:
