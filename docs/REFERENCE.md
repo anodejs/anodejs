@@ -6,4 +6,6 @@ ANODE administrators control deployment policy via rules in ```deploy.json``` in
 
 ## Application namespace
 
-Applications 
+URL for accessing application includes application name. Applications assigned with names by ANODE.
+
+[Namespace reference](https://github.com/anodejs/anodejs/blob/master/docs/NAMESPACE_REF.md)
