@@ -166,7 +166,7 @@ Those are parameters you need to change:
 
 ### Azure package
 
-Download Azure package for ANODE from http://anodejs.blob.core.windows.net/anode/production/anode.cspkg
+Download Azure package for ANODE from https://anodejs.blob.core.windows.net/anode/production/anode.cspkg
 
 ## Start the farm
 

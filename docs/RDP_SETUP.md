@@ -37,7 +37,7 @@ Copy all these parameters into RDP enabled configuration file.
 
 ### Upgrade deployment to RDP enabled version
 
-In Azure portal, upgrade the deployment. The RDP enabled package can be found at http://anodejs.blob.core.windows.net/anode/rdpenabled/anode.cspkg. The configuraiton file was prepared in the [previous step](https://github.com/anodejs/anodejs/blob/master/docs/RDP_SETUP.md#prepare-rdp-enabled-deployment-configuration).
+In Azure portal, upgrade the deployment. The RDP enabled package can be found at https://anodejs.blob.core.windows.net/anode/rdpenabled/anode.cspkg. The configuraiton file was prepared in the [previous step](https://github.com/anodejs/anodejs/blob/master/docs/RDP_SETUP.md#prepare-rdp-enabled-deployment-configuration).
 
 ### Try RDP to instances
 
