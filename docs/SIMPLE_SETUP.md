@@ -51,9 +51,13 @@ As the owner of the team you can manage members. Create three groups in the team
 
 ## Fork ANODE repositories
 
-Fork two ANODE repositories to your github organization (__NOTE__: Pay attention you are forking to the organization account, not your own account). The repositories are:
+Fork two ANODE repositories to your github organization (__NOTE__: Pay attention you are forking to the organization account and not to your own account). The repositories are:
 * https://github.com/anodejs/system
 * https://github.com/anodejs/bootstrap
+
+You will now have 2 forked repositories like those:
+* https://github.com/myanodeorg/system
+* https://github.com/myanodeorg/bootstrap
 
 ### Important note for early adopters (remove this section after system and bootstrap made public)
 
