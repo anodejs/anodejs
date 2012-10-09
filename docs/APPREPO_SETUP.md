@@ -24,7 +24,7 @@ Follow instructions [here](https://github.com/anodejs/anodejs/blob/master/docs/S
 
 Add deployment rule for the new repository into ```deploy.json``` file in ```rebus``` directory on the farm's branch of the cluster repository.
 
-Deployment system is very flexible. For demonstration here we are adding the most trivial rule that deploys repository ```rrr``` in the namespace ```rrr```. The rule for such deployment is ```"rrr": "https://github.com/myanodeorg/rrr``` (assuming the repository was created in github).
+[Deployment system](https://github.com/anodejs/anodejs/blob/master/docs/REFERENCE.md#deployment) is very flexible. For demonstration here we are adding the most trivial rule that deploys repository ```rrr``` in the namespace ```rrr```. The rule for such deployment is ```"rrr": "https://github.com/myanodeorg/rrr``` (assuming the repository was created in github).
 
 ```deploy.sys``` may look now like:
 

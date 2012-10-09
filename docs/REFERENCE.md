@@ -5,3 +5,5 @@ ANODE administrators control deployment policy via rules in ```deploy.json``` in
 [Deployment reference](https://github.com/anodejs/anodejs/blob/master/docs/DEPLOYMENT_REF.md)
 
 ## Application namespace
+
+Applications 
