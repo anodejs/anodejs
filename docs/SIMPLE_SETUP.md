@@ -24,9 +24,11 @@ If you don't have github account, create one (on https://github.com). If you hav
 
 ### Create buddy account
 
-Create new github account to be used by ANODE farm to pull sources. Let's assume you've called it ```myanodebuddy```.
+We need buddy account to let farms to pull sources. The account should not have rights stronger than reading (pulling) repositories. Letting farms operate over stronger account would harm security.
 
-If you cannot create private repositories on github, create buddy account on bitbucket as well. You should use the same name and the same password for this buddy account.
+Create new github account. Let's assume you've called it ```myanodebuddy```.
+
+If you cannot create private repositories on github, create buddy account on bitbucket as well. __IMPORTANT__: The name and the password for the buddy account should be the same on github and on bitbucket.
 
 ### Setup github organization
 
@@ -97,7 +99,7 @@ The file would look like:
 }
 ```
 
-Fill the the farm name (same as service URL prefix), Azure storage account name and the key.
+Fill the farm name (same as service URL prefix), Azure storage account name and the key.
 
 #### Other JSON configuration files
 
