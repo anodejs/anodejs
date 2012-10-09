@@ -74,12 +74,12 @@ Notice that directory ```zzz``` in ```rrr``` repository is collides with branch 
 
 Another type of collision may occur on the namespace. Even if files are deployed in separate directories, the implied namespace might be the same. See more details in [namespaces reference](https://github.com/anodejs/anodejs/blob/master/docs/REFERENCE.md#application-namespace). The example of such collision is as following:
 
-__WRONG__
 ```
+__WRONG__
 "__rrr": "https://github.com/myanodeorg/rrr",
 "__xxx": "https://github.com/myanodeorg/xxx"
-```
 __WRONG__
+```
 
 In the example above, two different repositories are deployed in opaque directories (not reflected in the namespace). If both repositories have ```index.js``` file in the directory named the same, they will collide on the application name. In such conditions ANODE's behavior is unpredictable.
 
