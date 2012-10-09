@@ -38,7 +38,7 @@ Let's assume you've called the organization ```myanodeorg```. You already have p
 
 Crate two more teams:
 * ```Developers``` - set push&pull permissions. Later, it will include developers' accounts and application repositories.
-* ```Readonly``` - set pull permissions only. Add buddy account here. Later can be used for private repositories, if any.
+* ```Readonly``` - set pull permissions only. Add buddy account here. Later it can be used for private repositories, if any.
 
 ### Setup bitbucket team (if needed)
 
@@ -51,7 +51,7 @@ As the owner of the team you can manage members. Create three groups in the team
 
 ## Fork ANODE repositories
 
-Fork two ANODE repositories to your github organization. The repositories are:
+Fork two ANODE repositories to your github organization (__NOTE__: Pay attention you are forking to the organization account, not your own account). The repositories are:
 * https://github.com/anodejs/system
 * https://github.com/anodejs/bootstrap
 
