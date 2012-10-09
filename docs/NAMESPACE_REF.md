@@ -8,7 +8,7 @@ The application name is derived from layout on file system. Each directory becom
 
 For example, let’s assume ```index.js``` file is placed in the directory ```aaa``` of the repository ```rrr```. Also, let’s assume that the branch ```zzz-d``` of the repository is deployed in directory ```rrr/zzz``` by the deployment configuration (see [deployment example](https://github.com/anodejs/anodejs/blob/master/docs/DEPLOYMENT_REF.md#example)). The name assigned to the application will be ```aaa.zzz.rrr```
 
-## Opaque directory
+## Opaque directories
 
 The directory with 2 underscore symbols in front, is considered opaque directory and doesn't contribute to application name.
 
