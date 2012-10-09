@@ -52,3 +52,23 @@ For example:
 The rule above deploys all ```rrr``` repository branches ending with ```-d``` suffix. The branch is deployed to a subdirectory of ```rrr``` with name equal to the prefix of the branch name.
 
 Such rule creates policy that distinguishes between deployable and non-deployable branches. The name convention allows deploying new branches without ANODE administrator intervention. When new branch with ```-d``` suffix is created, it is automatically deployed on the farm in appropriate namespace.
+
+## Example
+
+Putting all together:
+
+```javascript
+{
+  "namespaces": {
+    "rrr/__master": "https://github.com/myanodeorg/rrr",
+    "rrr/$1": "https://github.com/myanodeorg/rrr#(.+)-d",
+    "xxx": "https://github.com/myanodeorg/rrr#xxx"
+  }
+}
+```
+
+This policy deploys ```rrr``` master branch in ```rrr/__master``` directory. The rule uses opaque directory name ```__master``` (is prefixed by ```__```), as described in [namespaces reference](https://github.com/anodejs/anodejs/blob/master/docs/REFERENCE.md#application-namespace) and leads to suffix ```.rrr``` for all applications in the master branch.
+
+Branch ```xxx``` is deployed in ```xxx``` directory. The applications from the branch can be accessed by using ```.xxx``` suffix.
+
+All branches with suffix ```-d``` are deployed and application names suffix is derived from the branch name. For example, application in the branch named ```yyy-d``` can be accessed by using ```.yyy.rrr``` suffix.
