@@ -55,7 +55,7 @@ Fork two ANODE repositories to your github organization. The repositories are:
 
 ### Important note for early adopters (remove this section after system and bootstrap made public)
 
-As long as system and bootstrap repositories are private, the forked repositories remain private as well. You should add forked repositories to your github ```Readonly``` team, which grants read permissions to buddy account. I am not sure if it will work, given you are not administrators of ```anodejs``` team, which owns parent private repositories. I hope github doesn't suck and it will not work, meaning, it will not allow granting read permissions to repositories owned by ```anodejs```. Talk to me (yosefd@microsoft.com) and we will figure out how to let your buddy account to access these repositories (probably can be solved by adding one ```anodejs``` owner as a co-owner of your ANODE organization).
+As long as system and bootstrap repositories are private, the forked repositories remain private as well. You should add forked repositories to your github ```Readonly``` team, which grants read permissions to buddy account. I am not sure if it will work, given you are not administrators of ```anodejs``` team, which owns parent private repositories. I hope github doesn't suck and it will not work, meaning, it will not allow granting read permissions to repositories owned by ```anodejs```. Talk to me (yosefd@microsoft.com) and we will figure out how to let your buddy account to access these repositories (probably can be solved by adding one of ```anodejs``` owners as a co-owner of your ANODE organization).
 
 ## Create ANODE cluster configuration
 
