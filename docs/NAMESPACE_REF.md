@@ -22,12 +22,12 @@ ANODE parses requests arrived to the farm and routes them to applications. There
 
 ANODE creates virtual application domain for each application. The domain is built by concatenation of application name and the farm domain.
 
-For example, if the farm domain is ```myservice.net```, than application with name ```aaa.rrr``` can be accessed via domain name ```aaa.rrr.myservice.net```. Request with URL https://aaa.rrr.myservice.net will be routed to application ```aaa.rrr```
+For example, if the farm domain is ```myservice.net```, than application with name ```aaa.rrr``` can be accessed via domain name ```aaa.rrr.myservice.net```. Request with URL https://aaa.rrr.myservice.net/something/anything?querywhatever=somethingelse will be routed to application ```aaa.rrr```
 
 ### Application path
 
 Application can be accessed with application name specified in URL path, rather than domain.
 
-For example, to access application ```aaa.rrr``` on the farm ```myanodefarm.cloudapp.net```, you can use URL https://myanodefarm.cloudapp.net/aaa.rrr
+For example, to access application ```aaa.rrr``` on the farm ```myanodefarm.cloudapp.net```, you can use URL https://myanodefarm.cloudapp.net/aaa.rrr/something/anything?querywhatever=somethingelse
 
 In application, the path of URL it receives doesn't include application name. This allows applications to work identically, regardless the way they are called.
