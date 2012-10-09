@@ -166,9 +166,9 @@ Those are parameters you need to change:
 
 ### Azure package
 
-Download Azure package for ANODE from https://github.com/anodejs/anodejs/blob/master/resources/production/anode.cspkg
+Use Azure package for ANODE from https://github.com/anodejs/anodejs/blob/master/resources/production/anode.cspkg
 
-You may prefer to clone [anodejs repository](https://github.com/anodejs/anodejs) to the development machine to have all the resources locally.
+Browser may not let you download this big file. Clone [anodejs repository](https://github.com/anodejs/anodejs) to the development machine to have all the resources locally.
 
 ## Start the farm
 
