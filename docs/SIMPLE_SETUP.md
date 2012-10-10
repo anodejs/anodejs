@@ -170,6 +170,10 @@ Download Azure package for ANODE from https://anodejs.blob.core.windows.net/anod
 
 ## Start the farm
 
+### Verify buddy account has access to the repositories
+
+Before you proceed, verify yourself. Log in into github/bitbucket with the buddy account. Verify buddy account can see system, bootstrap and cluster repositories.
+
 ### Create Azure hosted service and deployment for the new farm
 
 In Azure portal create new hosted service. Fill the form:
