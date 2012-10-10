@@ -59,7 +59,7 @@ You will now have 2 forked repositories like those:
 * https://github.com/myanodeorg/system
 * https://github.com/myanodeorg/bootstrap
 
-### __Important__ note for early adopters (remove this section after system and bootstrap made public)
+### Important Important Important note for early adopters (remove this section after system and bootstrap made public)
 
 As long as system and bootstrap repositories are private, the forked repositories remain private as well. You should add forked repositories to your github ```Readonly``` team, which grants read permissions to buddy account. I am not sure if it will work, given you are not administrators of ```anodejs``` team, which owns parent private repositories. I hope github doesn't suck and it will not work, meaning, it will not allow granting read permissions to repositories owned by ```anodejs```. Talk to me (yosefd@microsoft.com) and we will figure out how to let your buddy account to access these repositories (probably can be solved by adding one of ```anodejs``` owners as a co-owner of your ANODE organization).
 
@@ -185,7 +185,7 @@ In Azure portal create new hosted service. Fill the form:
 * In ```Package location``` browse to the location of the downloaded ANODE package file.
 * In ```Configuration file``` browse to the configuration file you've created for the farm.
 
-NOTE: If you create farm with one instance (in Azure configuration you've specified ```Instances count="1"```), don't forget to check Azure's check box ```Deploy even if one or more roles contain a single instance.``` or/and ignore the warning Azure portal may issue.
+NOTE: If you create farm with one instance (in Azure configuration you've specified ```Instances count="1"```), don't forget to check Azure's check box ```Deploy even if one or more roles contain a single instance``` or/and ignore the warning Azure portal may issue.
 
 Submit the form and wait for all instances to be in the state ```Ready```.
 
