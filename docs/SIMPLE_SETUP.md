@@ -123,7 +123,7 @@ log.json:
 ]
 ```
 
-#### Setup permissions for cluster repository
+#### Setup permissions for the cluster repository
 
 If on bitbucket, go to ```Admin``` section and to ```Access Management```. Attach cluster repository to all groups you've created: ```Owners```, ```Developers``` and ```Readonly```.
 
