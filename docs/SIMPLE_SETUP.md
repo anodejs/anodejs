@@ -42,7 +42,7 @@ Crate two more teams:
 
 ### Setup bitbucket team (if needed)
 
-If you are using bitbucket for private repositories, you need to create complimentary bitbucket team. Let's assume you've called it by the same name aa github organization - ```myanodeorg```.
+If you are using bitbucket for private repositories, you need to create complimentary bitbucket team. Let's assume you've called it by the same name as github organization - ```myanodeorg```.
 
 As the owner of the team you can manage members. Create three groups in the team (complimentary to what you have on github):
 * ```Owners``` - rename existing admin team (not must, just for sake of common terminology between the two sites).
@@ -59,7 +59,7 @@ You will now have 2 forked repositories like those:
 * https://github.com/myanodeorg/system
 * https://github.com/myanodeorg/bootstrap
 
-### Important note for early adopters (remove this section after system and bootstrap made public)
+### __Important__ note for early adopters (remove this section after system and bootstrap made public)
 
 As long as system and bootstrap repositories are private, the forked repositories remain private as well. You should add forked repositories to your github ```Readonly``` team, which grants read permissions to buddy account. I am not sure if it will work, given you are not administrators of ```anodejs``` team, which owns parent private repositories. I hope github doesn't suck and it will not work, meaning, it will not allow granting read permissions to repositories owned by ```anodejs```. Talk to me (yosefd@microsoft.com) and we will figure out how to let your buddy account to access these repositories (probably can be solved by adding one of ```anodejs``` owners as a co-owner of your ANODE organization).
 
@@ -103,7 +103,7 @@ The file would look like:
 }
 ```
 
-Fill the farm name (same as service URL prefix), Azure storage account name and the key.
+Fill the farm name (same as service URL prefix), Azure storage account name and the primary key.
 
 #### Other JSON configuration files
 
@@ -158,7 +158,7 @@ Modify the template from https://github.com/anodejs/anodejs/blob/master/resource
 Those are parameters you need to change:
 * Instances - the number of instances (virtual machines).
 * Git.user - the name of buddy account on github and bitbucket (should be the same name for both).
-* Git.password - the password of buddy account on github and bitbucket (should be the same password for both). __IMPORTANT__: The user and the password should be URL encoded (e.g. '$' is '%24').
+* Git.password - the password of buddy account on github and bitbucket (should be the same password for both). __IMPORTANT__: The user and the password should be URL encoded (e.g. '$' is '%24'). Use http://meyerweb.com/eric/tools/dencoder/ to encode the password.
 * Bootstrap.Origin - the name of ANODE bootstrap repository to be used for the farm. Change the organization name.
 * Bootstrap.Branch - the branch of ANODE bootstrap repository be used for the farm. Leave it ```master```.
 * System.url - URL for ANODE system repository. It should point to ANODE system repository in your github ANODE organization.
@@ -180,9 +180,12 @@ In Azure portal create new hosted service. Fill the form:
 * URL prefix - the farm name. Better be as the name specified in ```farm.json``` above (e.g. ```myanodefarm``` as referred in this manual)
 * Name for the service - use the same name as URL prefix (not must, but easier to manage).
 * Choose region where to place this ANODE farm.
+* Deployment name is insignificant.
 * In ```Deployment option``` (sometimes called ```Environment```) choose ```Production```. We don't use Azure ```Staging``` deployments.
 * In ```Package location``` browse to the location of the downloaded ANODE package file.
 * In ```Configuration file``` browse to the configuration file you've created for the farm.
+
+NOTE: If you create farm with one instance (in Azure configuration you've specified ```Instances count="1"```), don't forget to check Azure's check box ```Deploy even if one or more roles contain a single instance.``` or/and ignore the warning Azure portal may issue.
 
 Submit the form and wait for all instances to be in the state ```Ready```.
 
