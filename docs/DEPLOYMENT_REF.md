@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 Deployment rules govern placement of branches of application repositories on the farm. ANODE can deploy multiple branches of multiple application repositories side-by-side.
 

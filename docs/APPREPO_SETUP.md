@@ -1,8 +1,6 @@
-# Introduction
+## Introduction
 
 The farm is now working and it is secured. You can start deploying applications on it. This manual guides you through the steps required to deploy your 1st application repository.
-
-# Setup steps
 
 ## Setup application repository
 

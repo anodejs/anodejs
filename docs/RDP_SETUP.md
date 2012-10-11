@@ -1,10 +1,8 @@
-# Introduction
+## Introduction
 
 For using ANODE there is no need to enable Remote Access to Azure instances. Therefore, production package doesn't include RDP support. However, troubleshooting needs may require RDP.
 
-# Setup steps
-
-## Use RDP enabled package
+## Instal RDP enabled package
 
 ANODE comes with RDP enabled package and sample certificate, which can be used for RDP. Notice, that this certificate is known by everybody, hence, it is not recommended to use it beyond initial setup. Once RDP enabled role is installed, switch to your own certificate.
 

@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 After basic setup ANODE the farm is not secured. Anybody can access any application running on the farm, including system applications. Anybody can access farm's dashboard.
 
@@ -8,7 +8,9 @@ The following steps will secure the farm. HTTPS will be enabled. Applications co
 
 In addition, access to restricted (aka private) applications will be granted only to farm developers, who authenticate with client certificate distributed by the administrator (you).
 
-# Setup steps
+## Ensure cluster repository is private
+
+If you've created public cluster repository, you to recreate it again as private. Follow [these steps](https://github.com/anodejs/anodejs/blob/master/docs/BITBUCKET_SETUP.md) to setup bitbucket and to host private cluster repository there.
 
 ## Obtain domain name and server certificate
 
@@ -18,7 +20,7 @@ Domain name is optional. You can continue and take care of security without prop
 
 ### Configuring domain
 
-Let's assume your domain is ```myservice.net```. Let's also assume the certicate for services in this domain is myservice.pfx.
+Let's assume your domain is ```myservice.net```. Let's also assume the certificate for services in this domain is myservice.pfx.
 
 #### Configure DNS
 
