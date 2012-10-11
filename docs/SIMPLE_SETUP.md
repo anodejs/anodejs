@@ -145,7 +145,7 @@ Modify the template from https://github.com/anodejs/anodejs/blob/master/resource
 Those are parameters you need to change:
 * Instances - the number of instances (virtual machines).
 * Git.user - the name of buddy account on github and bitbucket (should be the same name for both).
-* Git.password - the password of buddy account on github and bitbucket (should be the same password for both). __IMPORTANT__: The user and the password should be URL encoded (e.g. '$' is '%24'). Use http://meyerweb.com/eric/tools/dencoder/ to encode the password.
+* Git.password - the password of buddy account on github and bitbucket (should be the same password for both). __IMPORTANT__: The user and the password should be URL encoded (e.g. '$' is '%24'). Use http://meyerweb.com/eric/tools/dencoder/ to encode.
 * Bootstrap.Origin - the name of ANODE bootstrap repository to be used for the farm. Change the organization name.
 * Bootstrap.Branch - the branch of ANODE bootstrap repository be used for the farm. Leave it ```master```.
 * System.url - URL for ANODE system repository. It should point to ANODE system repository in the github ANODE organization.
