@@ -187,7 +187,20 @@ In Azure portal create new hosted service. Fill the form:
 
 NOTE: If you create farm with one instance (in Azure configuration you've specified ```Instances count="1"```), don't forget to check Azure's check box ```Deploy even if one or more roles contain a single instance``` or/and ignore the warning Azure portal may issue.
 
-Submit the form and wait for all instances to be in the state ```Ready```.
+Submit the form and wait for all instances to be in the state ```Ready```. 
+
+If this doesn't happen, please, recheck if everything is crafted according to this manual. 
+
+For troubleshooting bootstrap phase, you may need to [enable remote access](https://github.com/anodejs/anodejs/blob/master/docs/TROUBLESHOOTING_SETUP.md#configuring-remote-access).
+
+## Try it
+
+The farm is now up and running. Access farm's dashboard via the farm's URL. In this example, going to myanodefarm.cloudapp.net will lead you to the dashboard.
+
+Notice command line at the bottom of browser window. Type ```help``` to get the list of supported commands. ```man``` command shows manuals for ANODE dashboard.
+
+Try ```log``` command to see the latest logs from the farm.
+
 
 ## Configure deployment notifications
 
@@ -200,13 +213,5 @@ In the repository, go to ```Admin``` section. Use ```Service Hooks``` option. In
 ### Notifications from bitbucket
 
 In the repository, go to ```Admin``` section. Use ```Services``` option. Select ```POST``` service and fill URL for the farm. Assuming URL prefix chosen for the farm was ```myanodefarm```, the URL to be set here will be http://myanodefarm.cloudapp.net/deploy.sys/bitbucket?$bcast
-
-## Try it
-
-The farm is now up and running. Access farm's dashboard via the farm's URL. In this example, going to myanodefarm.cloudapp.net will lead you to the dashboard.
-
-Notice command line at the bottom of browser window. Type ```help``` to get the list of supported commands. ```man``` command shows manuals for ANODE dashboard.
-
-Try ```log``` command to see the latest logs from the farm.
 
 [Continue to follow ANODE farm setup manual for more advanced steps](https://github.com/anodejs/anodejs#setup-anode-farm)

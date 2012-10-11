@@ -1,3 +1,7 @@
+### Configuring Remote Access
+
+If bootstrap doesn't work, there is no way to understand what is going on, but to use RDP (Remote Access) to ANODE instances. To configure RDP follow [these steps](https://github.com/anodejs/anodejs/blob/master/docs/RDP_SETUP.md).
+
 ### Missing notifications
 
 Github and bitbucket send notification about changes in repositories. Sometimes these sites may fault. We find bitbucket somewhat less reliable and recommend github as the site of choice to host application repositories.
@@ -28,7 +32,3 @@ Next time to trigger deployment of ```rrr``` manually, you need to issue just th
 ```
 deploy now! -r rrr
 ```
-
-### Configuring Remote Access
-
-If bootstrap doesn't work, there is no way to understand what is going on, but to use RDP (Remote Access) to ANODE instances. To configure RDP follow [these steps](https://github.com/anodejs/anodejs/blob/master/docs/RDP_SETUP.md).
