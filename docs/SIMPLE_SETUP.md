@@ -12,11 +12,11 @@ If you don't have Azure subscription, you can create one. For evaluation purpose
 
 Go to Azure portal and login with your LiveId, which owns Azure subscription. Navigate to storage accounts and create storage account for your ANODE cluster. You can choose any name for this storage account. Let's assume you've called it ```myanodestorage```. The information we will have to take from here is the account primary access key. It is a long string you can copy from the portal.
 
-## Setup git
+## Setup github
 
-You will host ANODE and your applications in github repositories.
+You will host ANODE itself and applications in github repositories.
 
-You will also need private git space, where you will keep ANODE secrets. For this purpose you can use github private repository. However, on github, private repository cannot be created in a free account. As an alternative you can use bitbucket to host private git repository (or repositories, if you will need private application repositories). 
+You also need private git space, where you can keep ANODE secrets. For this purpose you can use github private repository. However, on github, private repository cannot be created using a free plan. As an alternative you can use bitbucket to host private git repository (or repositories, if you will need private application repositories), where private repostories can be crated for free.
 
 The following steps guide you how to create all repositories on github. However, if you are using public repository to host secrets, you will have to redo a few settings on bitbucket. You may proceed with setting up bitbucket in advance (see [here](https://github.com/anodejs/anodejs/blob/master/docs/BITBUCKET_SETUP.md)), to avoid repeating some steps, or, if you don't want to mess with bitbucket now, to return to this after basic ANODE farm works.
 
@@ -24,9 +24,11 @@ If you don't have github account, create one (on https://github.com).
 
 ### Create buddy account
 
-We need buddy account to let farms to pull sources. The account should not have rights stronger than reading (pulling) repositories. Letting farms operate over stronger account would harm security.
+Buddy account will be used by the farms to pull files from github. The account should not have rights stronger than reading (pulling) repositories. Letting farms operate over stronger account would harm security.
 
 Create new github account. Let's assume you've called it ```myanodebuddy```.
+
+NOTE: buddy account should not have any administrative rights. You will continue managing github with your own account. Log in back into your github account to continue.
 
 ### Setup github organization
 
@@ -48,29 +50,27 @@ You will now have 2 forked repositories like those:
 * https://github.com/myanodeorg/system
 * https://github.com/myanodeorg/bootstrap
 
-### Important Important Important (remove this section after system and bootstrap made public)
-
-As long as system and bootstrap repositories are private, the forked repositories remain private as well. You should add forked repositories to your github ```Readonly``` team, which grants read permissions to buddy account. I am not sure if it will work, given you are not administrators of ```anodejs``` team, which owns parent private repositories. I hope github doesn't suck and it will not work, meaning, it will not allow granting read permissions to repositories owned by ```anodejs```. Talk to me (yosefd@microsoft.com) and we will figure out how to let your buddy account to access these repositories (probably can be solved by adding one of ```anodejs``` owners as a co-owner of your ANODE organization).
-
 ## Create ANODE cluster configuration
 
 ANODE cluster configuration is kept in cluster repository. This repository doesn't include any code, just configuration parameters for cluster's farms.
 
 Eventually cluster repository has to be private as it includes various secrets: Azure storage account key and certificates keys. We will return to [the issues of security](https://github.com/anodejs/anodejs/blob/master/docs/SECURITY_SETUP.md) after the basic ANODE farm would be configured.
 
-Each farm in the cluster should have a branch in the cluster repository. ```master``` branch is reserved for development environment (consider developer's computer as another farm in ANODE cluster).
+Each farm in the cluster should have a branch in the cluster repository. ```master``` branch is reserved for the development environment (consider developer's computer as another farm in ANODE cluster).
 
-Refer to the template of cluster repository at https://github.com/anodejs/sample-cluster
+Refer to the template of the cluster repository at https://github.com/anodejs/sample-cluster
 
 ### Setup cluster repository
 
-Create new repository in the github organization. You can call it ```cluster```.
+Create new repository in [your github organization](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#setup-github-organization). You can call it ```cluster```.
 
 If you pay github for more advanced plan and you can create private repository. If you have free github plan, you will have to recreate cluster repository later, on [bitbucket](https://github.com/anodejs/anodejs/blob/master/docs/BITBUCKET_SETUP.md). 
 
 Configure access rights by adding cluster repository to ```Readonly``` team.
 
-Create branch for the farm. Let's assume you have called it ```farm```. 
+Clone the cluster repository to your computer. The following steps will require using local git.
+
+Create a branch for the farm (use ```git branch``` command). Let's assume you have called it ```farm```. 
 
 Create ```rebus``` directory and place 3 json files in it:
 * deploy.json
@@ -155,11 +155,17 @@ Those are parameters you need to change:
 
 Download Azure package for ANODE from https://anodejs.blob.core.windows.net/anode/production/anode.cspkg
 
+NOTE: Internet Explorer renames changes the file extension to .zip upon download. Rename the file back to .cspkg
+
 ## Start the farm
 
 ### Verify buddy account has access to the repositories
 
-Before you proceed, verify yourself. Log in into github with buddy account. Verify buddy account can see system, bootstrap and cluster repositories.
+Before you proceed, verify yourself. Log in into github with buddy account. Verify buddy account can access system, bootstrap and cluster repositories from [your organization](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#setup-github-organization), which are:
+
+* https://github.com/myanodeorg/system
+* https://github.com/myanodeorg/bootstrap
+* https://github.com/myanodeorg/cluster
 
 ### Create Azure hosted service and deployment for the new farm
 
@@ -190,7 +196,7 @@ Try ```log``` command to see the latest logs from the farm.
 
 ## Configure deployment notifications
 
-Changes in repositories (system, cluster and application repositories) should trigger deployment to the farm. For each relevant repository configure notifications.
+Changes in repositories (system, cluster and repositories where you will host ANODE applications) should trigger deployment to the farm. For each relevant repository (at this stage those are system and cluster) configure notifications.
 
 ### Notifications from github
 
