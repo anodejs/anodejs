@@ -8,6 +8,8 @@ These steps guide you through the workflow of setup for the simplest ANODE clust
 
 If you don't have Azure subscription, you can create one. For evaluation purposes you can always use trial subscription, which is free.
 
+Start from here for everything related to Azure: http://windowsazure.com
+
 ### Create storage account for your ANODE cluster
 
 Go to Azure portal and login with your LiveId, which owns Azure subscription. Navigate to storage accounts and create storage account for your ANODE cluster. You can choose any name for this storage account. Let's assume you've called it ```myanodestorage```. The information we will have to take from here is the account primary access key. It is a long string you can copy from the portal.
