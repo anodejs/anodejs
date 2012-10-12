@@ -16,13 +16,13 @@ Go to Azure portal and login with your LiveId, which owns Azure subscription. Na
 
 ## Setup github
 
-You will host ANODE itself and applications in github repositories.
+If you don't have github account, create one (on https://github.com). 
 
-You also need private git space, where you can keep ANODE secrets. For this purpose you can use github private repository. However, on github, private repository cannot be created using a free plan. As an alternative you can use bitbucket to host private git repository (or repositories, if you will need private application repositories), where private repostories can be crated for free.
+You will host ANODE itself and your applications in github repositories.
+
+You also need private git space, where you can keep ANODE secrets. For this purpose you can use github private repository. However, on github, private repository cannot be created using the free plan (see more about github plans [here](https://github.com/settings/billing)). As an alternative you can use bitbucket to host private git repository (or repositories, if you will need private application repositories), where private repositories can be crated for free.
 
 The following steps guide you how to create all repositories on github. However, if you are using public repository to host secrets, you will have to redo a few settings on bitbucket. You may proceed with setting up bitbucket in advance (see [here](https://github.com/anodejs/anodejs/blob/master/docs/BITBUCKET_SETUP.md)), to avoid repeating some steps, or, if you don't want to mess with bitbucket now, to return to this after basic ANODE farm works.
-
-If you don't have github account, create one (on https://github.com). 
 
 ### Create buddy account
 
