@@ -58,11 +58,11 @@ Eventually cluster repository has to be private as it includes various secrets: 
 
 Each farm in the cluster should have a branch in the cluster repository. ```master``` branch is reserved for the development environment (consider developer's computer as another farm in ANODE cluster).
 
-Refer to the template of the cluster repository at https://github.com/anodejs/sample-cluster
+Refer to the template of the cluster repository at https://github.com/anodejs/sample-cluster. To speed up the next steps you can clone this repository into your organization. However, maintaining parent relationship with this sample is not recommended. Cluster repository is intended to be private space for keeping your cluster configuration. ```sample-cluster``` just illustrates how the cluster may look like.
 
 ### Setup cluster repository
 
-Create new repository in [your github organization](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#setup-github-organization). You can call it ```cluster```.
+Create new repository in [your github organization](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#setup-github-organization) (or fork https://github.com/anodejs/sample-cluster to make it easier for yourself). You can call it ```cluster```.
 
 If you pay github for more advanced plan and you can create private repository. If you have free github plan, you will have to recreate cluster repository later, on [bitbucket](https://github.com/anodejs/anodejs/blob/master/docs/BITBUCKET_SETUP.md). 
 
