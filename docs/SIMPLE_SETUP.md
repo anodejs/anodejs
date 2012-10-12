@@ -72,7 +72,7 @@ Configure access rights by adding cluster repository to ```Readonly``` team.
 
 Clone the cluster repository to your computer. The following steps may require using local git.
 
-If not yet exists though forking, create a branch for the farm (use ```git branch``` command). Let's assume you have called it ```farm```. 
+If not yet exists through forking, create a branch for the farm in the repository (use ```git branch``` command). Let's assume you have called it ```farm```. 
 
 Create ```rebus``` directory and place 3 json files in it:
 * deploy.json
