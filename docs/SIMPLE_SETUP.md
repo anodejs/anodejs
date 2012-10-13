@@ -50,6 +50,10 @@ You will now have 2 forked repositories like those:
 * https://github.com/myanodeorg/system
 * https://github.com/myanodeorg/bootstrap
 
+### Set permissions
+
+As long as system and bootstrap repositories are private, the forked repositories remain private as well. Add forked repositories to Readonly team, which grants read permissions to the buddy account.
+
 ## Create ANODE cluster configuration
 
 ANODE cluster configuration is kept in cluster repository. This repository doesn't include any code, just configuration parameters for cluster's farms.
