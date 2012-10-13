@@ -2,11 +2,7 @@
 
 ANODE is a PaaS (Platform as a Service) for developing and hosting node.js WEB applications on Azure.
 
-Azure already offers great integration with node.js and git. See http://go.microsoft.com/fwlink/?LinkId=254424&clcid=0x409. 
-
-ANODE adds more [features](https://github.com/anodejs/anodejs#features), like multitenancy, dashboard, logging, github integration and a few more.
-
-ANODE is available as free open source in github. You can clone all ANODE code and have full control over the platform. The steps [below](https://github.com/anodejs/anodejs#setup-anode-farm) guide you in creating your own ANODE deployment.
+ANODE is available as a free open source in github. You can clone all ANODE code and have full control over the platform. The steps [below](https://github.com/anodejs/anodejs#setup-anode-farm) guide you in creating your own ANODE deployment.
 
 ## Features
 
