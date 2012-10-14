@@ -32,11 +32,11 @@ NOTE: buddy account should not have any administrative rights. You will continue
 
 ### Setup github organization
 
-[Github organization](https://github.com/anodejs/anodejs/blob/master/docs/images/githuborganizations.jpg) is useful for managing permissions for developers collaborating in building applications on your ANODE deployment.
+[Github organization](https://raw.github.com/anodejs/anodejs/master/docs/images/githuborganizations.jpg) is useful for managing permissions for developers collaborating in building applications on your ANODE deployment.
 
 Let's assume you've called the organization ```myanodeorg```. You already have predefined team called ```Owners```. You are the only member.
 
-[Create two more teams](https://github.com/anodejs/anodejs/blob/master/docs/images/githubteams.jpg):
+[Create two more teams](https://raw.github.com/anodejs/anodejs/master/docs/images/githubteams.jpg):
 * ```Developers``` - set push&pull permissions. Later, it will include developers' accounts and application repositories.
 * ```Readonly``` - set pull permissions only. Add buddy account here. Later it can be used for private repositories, if any.
 
