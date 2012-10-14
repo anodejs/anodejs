@@ -36,7 +36,7 @@ NOTE: buddy account should not have any administrative rights. You will continue
 
 Let's assume you've called the organization ```myanodeorg```. You already have predefined team called ```Owners```. You are the only member.
 
-Crate two more teams:
+[Create two more teams](https://github.com/anodejs/anodejs/blob/master/docs/images/githubteams.jpg):
 * ```Developers``` - set push&pull permissions. Later, it will include developers' accounts and application repositories.
 * ```Readonly``` - set pull permissions only. Add buddy account here. Later it can be used for private repositories, if any.
 
