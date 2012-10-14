@@ -12,7 +12,7 @@ Start from here for everything related to Azure: http://windowsazure.com
 
 ### Create storage account for your ANODE cluster
 
-Go to Azure portal and login with your LiveId, which owns Azure subscription. Navigate to storage accounts and create storage account for your ANODE cluster. You can choose any name for this storage account. Let's assume you've called it ```myanodestorage```. The information we will have to take from here is the account primary access key. It is a long string you can copy from the portal.
+Go to Azure portal and login with your LiveId, which owns Azure subscription. Navigate to storage accounts and create storage account for your ANODE cluster. You can choose any name for this storage account. Let's assume you've called it ```myanodestorage``` (not literally, just for illustration purposes; choose appropriate unique name). The information we will have to take from here is the account primary access key. It is a long string you can copy from the portal.
 
 ## Setup github
 
@@ -26,15 +26,15 @@ The following steps guide you how to create all repositories on github. However,
 
 Buddy account will be used by the farms to pull files from github. The account should not have rights stronger than reading (pulling) repositories. Letting farms operate over stronger account would harm security.
 
-Create new github account. Let's assume you've called it ```myanodebuddy```.
+Create new github account. Let's assume you've called it ```myanodebuddy``` (illustrative name, the real name should be unique account name).
 
-NOTE: buddy account should not have any administrative rights. You will continue managing github with your own account. Log in back into your github account to continue.
+__NOTE__: buddy account should not have any administrative rights. You will continue managing github with your own account. Log in back into your github account to continue.
 
 ### Setup github organization
 
 [Github organization](https://raw.github.com/anodejs/anodejs/master/docs/images/githuborganizations.jpg) is useful for managing permissions for developers collaborating in building applications on your ANODE deployment.
 
-Let's assume you've called the organization ```myanodeorg```. You already have predefined team called ```Owners```. You are the only member.
+Let's assume you've called the organization ```myanodeorg``` (illustrative name, the real name should be unique). You already have predefined team called ```Owners```. You are the only member.
 
 [Create two more teams](https://raw.github.com/anodejs/anodejs/master/docs/images/githubteams.jpg):
 * ```Developers``` - set push&pull permissions. Later, it will include developers' accounts and application repositories.
