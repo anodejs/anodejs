@@ -42,7 +42,7 @@ Let's assume you've called the organization ```myanodeorg```. You already have p
 
 ## Fork ANODE repositories
 
-Fork two ANODE repositories to your github organization (__NOTE__: Pay attention you are forking to the organization account and not to your own account). The repositories are:
+Fork two ANODE repositories to your github organization (__NOTE__: Pay attention you are forking to the [organization account](https://raw.github.com/anodejs/anodejs/master/docs/images/githubselectorg.jpg) and not to your own account). The repositories are:
 * https://github.com/anodejs/system
 * https://github.com/anodejs/bootstrap
 
