@@ -20,8 +20,6 @@ You will host ANODE itself and your applications in github repositories.
 
 You also need private git space, where you can keep ANODE secrets. For this purpose you can use github private repository. However, on github, private repository cannot be created using the free plan (see more about github plans [here](https://github.com/settings/billing)). As an alternative you can use [bitbucket](https://bitbucket.org/) to host private git repository (or repositories, if you will need private application repositories) for free.
 
-The following steps guide you how to create all repositories on github. However, if you are using public repository to host secrets, you will have to redo a few settings on bitbucket. You may proceed with setting up bitbucket in advance (see [here](https://github.com/anodejs/anodejs/blob/master/docs/BITBUCKET_SETUP.md)), to avoid repeating some steps, or, if you don't want to mess with bitbucket now, to return to this after basic ANODE farm works.
-
 ### Create buddy account
 
 Buddy account will be used by the farms to pull files from github. The account should not have rights stronger than reading (pulling) repositories. Letting farms operate over stronger account would harm security.
@@ -68,7 +66,7 @@ Refer to the template of the cluster repository at https://github.com/anodejs/sa
 
 Create new repository in [your github organization](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#setup-github-organization) (or fork https://github.com/anodejs/sample-cluster to make it easier for yourself). You can call it ```cluster```.
 
-If you pay github for more advanced plan and you can create private repository. If you have free github plan, you will have to recreate cluster repository later, on [bitbucket](https://github.com/anodejs/anodejs/blob/master/docs/BITBUCKET_SETUP.md). 
+If you pay github for more advanced plan and you can create private repository. If you have only free github plan, you will have to recreate cluster repository later, on [bitbucket](https://github.com/anodejs/anodejs/blob/master/docs/SECURITY_SETUP.md#ensure-cluster-repository-is-private).
 
 Configure access rights by adding cluster repository to ```Readonly``` team.
 
