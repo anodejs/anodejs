@@ -32,7 +32,7 @@ NOTE: buddy account should not have any administrative rights. You will continue
 
 ### Setup github organization
 
-Github organization is useful for managing permissions for developers collaborating in building applications on your ANODE deployment.
+[Github organization](https://github.com/anodejs/anodejs/blob/master/docs/images/githuborganizations.jpg) is useful for managing permissions for developers collaborating in building applications on your ANODE deployment.
 
 Let's assume you've called the organization ```myanodeorg```. You already have predefined team called ```Owners```. You are the only member.
 

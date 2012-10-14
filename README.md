@@ -8,7 +8,7 @@ ANODE is available as a free open source in github. You can clone all ANODE code
 
 In a nutshell, ANODE offers the following features:
 
-* Multitenancy - ANODE hosts multiple versions of multiple applications, from git repositories and branches, side-by-side.
+* Multitenancy - ANODE hosts multiple versions of multiple applications from git repositories and branches, side-by-side.
 * Instantaneous deployment - push into git leads to immediate service update in the cloud. ANODE is integrated with github (and bitbucket), supports and leverages github development process.
 * Security - ANODE wraps all security handling and exposes HTTPS endpoint. ANODE applications are HTTP servers, agnostic of security.
 * Instantaneous logging - ANODE offers instant viewing and querying logs from applications.
