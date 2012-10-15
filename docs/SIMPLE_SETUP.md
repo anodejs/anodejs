@@ -91,8 +91,7 @@ The file looks like:
 
 Change ```myanodefarm``` to the real name of your farm. This name will be later used as domain prefix for the farm URL.
 
-Change the name of Azure storage account to the name of the [storage account you've created](https://github.
-com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#create-storage-account-for-your-anode-cluster).
+Change the name of Azure storage account to the name of the [storage account you've created](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#create-storage-account-for-your-anode-cluster).
 
 Change the name of Azure storage account key to the primary key of the [storage account you've created](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#create-storage-account-for-your-anode-cluster).
 
