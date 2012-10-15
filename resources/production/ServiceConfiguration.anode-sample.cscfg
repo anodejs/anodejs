@@ -9,7 +9,7 @@
       <Setting name="Bootstrap.Origin" value="github.com/myanodeorg/bootstrap" />
       <Setting name="Bootstrap.Branch" value="master" />
       <Setting name="System.url" value="https://github.com/myanodeorg/system" />
-      <Setting name="Farm.url" value="https://bitbucket.org/myanodeorg/cluster#farm" />
+      <Setting name="Farm.url" value="https://github.com/myanodeorg/cluster#farm" />
     </ConfigurationSettings>
     <Certificates>
     </Certificates>

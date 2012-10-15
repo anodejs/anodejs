@@ -6,9 +6,9 @@ Bitbucket (https://bitbucket.org) offers free private repositories. Since cluste
 
 Create buddy account on bitbucket. __IMPORTANT__: The name and the password for the buddy account should be the same on [github](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#create-buddy-account) and on bitbucket.
 
-## Setup bitbucket team (if needed)
+## Setup bitbucket team 
 
-If you are using bitbucket for private repositories, you need to create bitbucket team complimentary to github organization. Let's assume you've called it by the same name as github organization - ```myanodeorg```.
+Create bitbucket team complimentary to github organization. Let's assume you've called it by the same name as github organization - ```myanodeorg```.
 
 NOTE: The team on bitbucket requires separate e-mail account.
 
@@ -23,7 +23,7 @@ Create cluster repository as described [here](https://github.com/anodejs/anodejs
 
 ### Setup permissions for the cluster repository
 
-If on bitbucket, go to ```Admin``` section and to ```Access Management```. Attach cluster repository to all groups you've created: ```Owners```, ```Developers``` and ```Readonly```.
+Go to ```Admin``` section and to ```Access Management```. Attach cluster repository to all groups you've created: ```Owners```, ```Developers``` and ```Readonly```.
 
 Log in into bitbucket with the buddy account and verify buddy account has access to the cluster repository.
 

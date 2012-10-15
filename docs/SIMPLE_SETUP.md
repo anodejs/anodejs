@@ -26,7 +26,7 @@ Buddy account will be used by the farms to pull files from github. The account s
 
 Create new github account. Let's assume you've called it ```myanodebuddy``` (illustrative name, the real name should be unique account name).
 
-__IMPORTANT__: buddy account should not have any administrative rights. You should continue managing github with your own account. Log in back into your github account to continue.
+__IMPORTANT__: buddy account should not have any administrative rights. You should continue managing github with your own account. Log in back into __your__ github account to continue.
 
 ### Setup github organization
 
@@ -60,30 +60,21 @@ Eventually cluster repository has to be private as it includes various secrets: 
 
 Each farm in the cluster should have a branch in the cluster repository. ```master``` branch is reserved for the development environment (consider developer's computer as another farm in ANODE cluster).
 
-Refer to the template of the cluster repository at https://github.com/anodejs/sample-cluster. To speed up the next steps you can fork this repository into your organization. However, maintaining parent relationship with this sample is not recommended. Cluster repository is intended to be private space for keeping your cluster configuration. ```sample-cluster``` just illustrates how the cluster may look like.
-
 ### Setup cluster repository
 
-Create new repository in [your github organization](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#setup-github-organization) (or fork https://github.com/anodejs/sample-cluster to make it easier for yourself). You can call it ```cluster```.
+For cluster repository template https://github.com/anodejs/sample-cluster into [your github organization](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#setup-github-organization). Rename it ```cluster```.
 
-If you pay github for more advanced plan and you can create private repository. If you have only free github plan, you will have to recreate cluster repository later, on bitbucket.
+If you pay github for more advanced plan convert the cluster repository to private. If you have only free github plan, you will have to recreate cluster repository, later, on bitbucket.
 
 Configure access rights by adding cluster repository to ```Readonly``` team.
 
-Clone the cluster repository to your computer. The following steps may require using local git.
+Switch to ```farm``` branch, which will be responsible for setting of your first farm.
 
-If not yet exists through forking, create a branch for the farm in the repository (use ```git branch``` command). Let's assume you have called it ```farm```. 
+#### Update ```farm.json``` in ```rebus``` directory
 
-Create ```rebus``` directory and place 3 json files in it:
-* deploy.json
-* farm.json
-* log.json
+Make sure you are on ```farm``` branch of ```cluster``` repository.
 
-```farm``` branch of ```cluster``` repository will look just like https://github.com/anodejs/sample-cluster/tree/farm
-
-#### Update ```farm.json```
-
-The file would look like:
+The file looks like:
 
 ```javascript
 {
@@ -98,31 +89,20 @@ The file would look like:
 }
 ```
 
-Fill the farm name (same as service URL prefix), Azure storage account name and the primary key.
+Change ```myanodefarm``` to the real name of your farm. This name will be later used as domain prefix for the farm URL.
 
-#### Other JSON configuration files
+Change the name of Azure storage account to the name of the [storage account you've created](https://github.
+com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#create-storage-account-for-your-anode-cluster).
 
-At the moment, there is no need to modify ```deploy.json``` and ```log.json```. They can remain as shown in the sample.
-
-deploy.json:
-```javascript
-{
-  "namespaces": {}
-}
-```
-
-log.json:
-```javascript
-[
-  {"name": "azuretable", "write" : true, "default": true}
-]
-```
+Change the name of Azure storage account key to the primary key of the [storage account you've created](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#create-storage-account-for-your-anode-cluster).
 
 ## Prepare Azure deployment files
 
 ### Azure configuration
 
-Modify the template from https://github.com/anodejs/anodejs/blob/master/resources/production/ServiceConfiguration.anode-sample.cscfg with appropriate settings. The template looks like:
+Download farm configuration file template from https://github.com/anodejs/anodejs/blob/master/resources/production/ServiceConfiguration.anode-sample.cscfg.
+
+Modify the template with appropriate settings. The template looks like:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -146,8 +126,8 @@ Modify the template from https://github.com/anodejs/anodejs/blob/master/resource
 
 Those are parameters you need to change:
 * Instances - the number of instances (virtual machines).
-* Git.user - the name of buddy account on github and bitbucket (should be the same name for both).
-* Git.password - the password of buddy account on github and bitbucket (should be the same password for both). __IMPORTANT__: The user and the password should be URL encoded (e.g. '$' is '%24'). Use http://meyerweb.com/eric/tools/dencoder/ to encode.
+* Git.user - the name of the [buddy account](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#create-buddy-account).
+* Git.password - the password of the [buddy account](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#create-buddy-account). __IMPORTANT__: The user and the password should be URL encoded (e.g. '$' is '%24'). Use http://meyerweb.com/eric/tools/dencoder/ to encode.
 * Bootstrap.Origin - the name of ANODE bootstrap repository to be used for the farm. Change the organization name.
 * Bootstrap.Branch - the branch of ANODE bootstrap repository be used for the farm. Leave it ```master```.
 * System.url - URL for ANODE system repository. It should point to ANODE system repository in the github ANODE organization.
@@ -163,30 +143,37 @@ NOTE: Internet Explorer renames changes the file extension to .zip upon download
 
 ### Verify buddy account has access to the repositories
 
-Before you proceed, verify yourself. Log in into github with buddy account. Verify buddy account can access system, bootstrap and cluster repositories from [your organization](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#setup-github-organization), which are:
+Before you proceed, verify yourself. Log in into github with buddy account. Verify buddy account can access system, bootstrap and cluster repositories from [your organization](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#setup-github-organization), which are like:
 
 * https://github.com/myanodeorg/system
 * https://github.com/myanodeorg/bootstrap
 * https://github.com/myanodeorg/cluster
 
-### Create Azure hosted service and deployment for the new farm
+### Create Azure cloud service and deployment for the new farm
 
-In Azure portal create new hosted service. Fill the form:
-* URL prefix - the farm name. Better be as the name specified in ```farm.json``` above (e.g. ```myanodefarm``` as referred in this manual)
-* Name for the service - use the same name as URL prefix (not must, but easier to manage).
-* Choose region where to place this ANODE farm.
-* Deployment name is insignificant.
-* In ```Deployment option``` (sometimes called ```Environment```) choose ```Production```. We don't use Azure ```Staging``` deployments.
-* In ```Package location``` browse to the location of the downloaded ANODE package file.
-* In ```Configuration file``` browse to the configuration file you've created for the farm.
+In Azure portal create new cloud service.
+
+In ```URL``` fill the farm name ([the same as specified in ```farm.json```](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#update-farmjson)) as domain prefix.
+
+Choose appropriate region. Better be the same as region chosen for [storage account](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#create-storage-account-for-your-anode-cluster).
+
+### Create production deployment
+
+Create new production deployment. NOTE: ANODE doesn't use staging deployments.
+
+Deployment name is insignificant.
+
+Upload [package file](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#azure-package) and [configuration file](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#azure-configuration) you've created.
 
 NOTE: If you create farm with one instance (in Azure configuration you've specified ```Instances count="1"```), don't forget to check Azure's check box ```Deploy even if one or more roles contain a single instance``` or/and ignore the warning Azure portal may issue.
 
-Submit the form and wait for all instances to be in the state ```Ready```. 
+Wait for all instances to be in the state ```Ready```. This would take up to 15 minutes.
 
-If this doesn't happen, please, recheck if everything is crafted according to this manual. 
+If this doesn't happen, verify yourself:
 
-For troubleshooting bootstrap phase, you may need to [enable remote access](https://github.com/anodejs/anodejs/blob/master/docs/TROUBLESHOOTING_SETUP.md#configuring-remote-access).
+* Recheck if everything is crafted according to this manual. 
+* In deployment configuration tab check deployment settings. Are all parameters (```Git.user```, ```Git.password```, ```Bootstrap.Origin```, ```Bootstrap.Branch```, ```System.url```, ```Farm.url```) set correctly?
+* If you want to change the configuration, delete the deployment and create the new one.
 
 ## Try it
 
