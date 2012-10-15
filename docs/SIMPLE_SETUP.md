@@ -18,7 +18,7 @@ Go to Azure portal and login with your LiveId, which owns Azure subscription. Na
 
 You will host ANODE itself and your applications in github repositories.
 
-You also need private git space, where you can keep ANODE secrets. For this purpose you can use github private repository. However, on github, private repository cannot be created using the free plan (see more about github plans [here](https://github.com/settings/billing)). As an alternative you can use [bitbucket](https://bitbucket.org/) to host private git repository (or repositories, if you will need private application repositories) for free.
+You also need private git space, where you can keep ANODE secrets. For this purpose you can use github private repository. However, on github, private repository cannot be created using the free plan (see more about github plans [here](https://github.com/settings/billing)). As an alternative you can use [bitbucket](https://bitbucket.org/) to host private git repository (or repositories, if you will need private application repositories) for free. Later steps will show how to create private repository on bitbucket.
 
 ### Create buddy account
 
