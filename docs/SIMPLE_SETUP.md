@@ -18,9 +18,7 @@ Go to Azure portal and login with your LiveId, which owns Azure subscription. Na
 
 You will host ANODE itself and your applications in github repositories.
 
-You also need private git space, where you can keep ANODE secrets. For this purpose you can use github private repository. However, on github, private repository cannot be created using the free plan (see more about github plans [here](https://github.com/settings/billing)). As an alternative you can use [bitbucket](https://bitbucket.org/) to host private git repository (or repositories, if you will need private application repositories) for free. Later, we will return to [issues of security in general](https://github.com/anodejs/anodejs/blob/master/docs/SECURITY_SETUP.md) and particularly [private repositories hosted on bitbucket](https://github.com/anodejs/anodejs/blob/master/docs/SECURITY_SETUP.md#ensure-cluster-repository-is-private).
-
-Meanwhile, follow the basic setup instructions below.
+You also need private git space, where you can keep ANODE secrets. For this purpose you can use github private repository. However, on github, private repository cannot be created using the free plan (see more about github plans [here](https://github.com/settings/billing)). As an alternative you can use [bitbucket](https://bitbucket.org/) to host private git repository (or repositories, if you will need private application repositories) for free.
 
 ### Create buddy account
 
@@ -28,7 +26,7 @@ Buddy account will be used by the farms to pull files from github. The account s
 
 Create new github account. Let's assume you've called it ```myanodebuddy``` (illustrative name, the real name should be unique account name).
 
-__NOTE__: buddy account should not have any administrative rights. You will continue managing github with your own account. Log in back into your github account to continue.
+__IMPORTANT__: buddy account should not have any administrative rights. You should continue managing github with your own account. Log in back into your github account to continue.
 
 ### Setup github organization
 
@@ -58,7 +56,7 @@ As long as system and bootstrap repositories are private, the forked repositorie
 
 ANODE cluster configuration is kept in cluster repository. This repository doesn't include any code, just configuration parameters for cluster's farms.
 
-Eventually cluster repository has to be private as it includes various secrets: Azure storage account key and certificates keys. We will return to [the issues of security](https://github.com/anodejs/anodejs/blob/master/docs/SECURITY_SETUP.md) after the basic ANODE farm would be configured.
+Eventually cluster repository has to be private as it includes various secrets: Azure storage account key and certificates keys. We will return to the issues of security after the basic ANODE farm would be configured.
 
 Each farm in the cluster should have a branch in the cluster repository. ```master``` branch is reserved for the development environment (consider developer's computer as another farm in ANODE cluster).
 
@@ -68,7 +66,7 @@ Refer to the template of the cluster repository at https://github.com/anodejs/sa
 
 Create new repository in [your github organization](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#setup-github-organization) (or fork https://github.com/anodejs/sample-cluster to make it easier for yourself). You can call it ```cluster```.
 
-If you pay github for more advanced plan and you can create private repository. If you have only free github plan, you will have to recreate cluster repository later, on [bitbucket](https://github.com/anodejs/anodejs/blob/master/docs/SECURITY_SETUP.md#ensure-cluster-repository-is-private).
+If you pay github for more advanced plan and you can create private repository. If you have only free github plan, you will have to recreate cluster repository later, on bitbucket.
 
 Configure access rights by adding cluster repository to ```Readonly``` team.
 
