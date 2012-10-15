@@ -152,7 +152,7 @@ Before you proceed, verify yourself. Log in into github with buddy account. Veri
 
 In Azure portal create new cloud service.
 
-In ```URL``` fill the farm name ([the same as specified in ```farm.json```](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#update-farmjson)) as domain prefix.
+In ```URL``` fill the farm name (the same as specified in ```farm.json```) as domain prefix.
 
 Choose appropriate region. Better be the same as region chosen for [storage account](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#create-storage-account-for-your-anode-cluster).
 
