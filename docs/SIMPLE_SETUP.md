@@ -164,7 +164,7 @@ Deployment name is insignificant.
 
 Upload [package file](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#azure-package) and [configuration file](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#azure-configuration) you've created.
 
-NOTE: If you create farm with one instance (in Azure configuration you've specified ```Instances count="1"```), don't forget to check Azure's check box ```Deploy even if one or more roles contain a single instance``` or/and ignore the warning Azure portal may issue.
+NOTE: If you create a farm with one instance (in Azure configuration you've specified ```Instances count="1"```), don't forget to check Azure's check box ```Deploy even if one or more roles contain a single instance``` or/and ignore the warning Azure portal may issue.
 
 Wait for all instances to be in the state ```Ready```. This would take up to 15 minutes.
 
