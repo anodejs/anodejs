@@ -8,7 +8,7 @@ Create buddy account on bitbucket.
 
 __IMPORTANT__: The name and the password for the buddy account should be the same on [github](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#create-buddy-account) and on bitbucket.
 
-_IMPORTANT__: buddy account should not have any administrative rights. You should continue managing bitbucket with your own account. Log in back into __your__ bitbucket account to continue.
+__IMPORTANT__: buddy account should not have any administrative rights. You should continue managing bitbucket with your own account. Log in back into __your__ bitbucket account to continue.
 
 ## Setup bitbucket team 
 
