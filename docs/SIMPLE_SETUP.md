@@ -12,7 +12,11 @@ Start from here for everything related to Azure: http://windowsazure.com
 
 ### Create storage account for your ANODE cluster
 
-Go to Azure portal and login with your LiveId, which owns Azure subscription. Navigate to storage accounts and create storage account for your ANODE cluster. You can choose any name for this storage account. Let's assume you've called it ```myanodestorage``` (not literally, just for illustration purposes; choose appropriate unique name). The information we will have to take from here is the account primary access key. It is a long string you can copy from the portal.
+Go to Azure portal and login with your LiveId, which owns Azure subscription. 
+
+Use new HTML5 Azure portal.
+
+Navigate to storage accounts and create storage account for your ANODE cluster. You can choose any name for this storage account. Let's assume you've called it ```myanodestorage``` (not literally, just for illustration purposes; choose appropriate unique name). The information we will have to take from here is the account primary access key. It is a long string you can copy from the portal.
 
 ## Setup github
 
