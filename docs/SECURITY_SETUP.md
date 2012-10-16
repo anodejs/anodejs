@@ -63,7 +63,7 @@ $ openssl pkcs12 -in myservice.pfx -out private.pem -nocerts -nodes
 
 ## Option: create self-signed server certificate
 
-If you don't want to acquire domain (can always do this later), you can secure the farm with self-signed certificates. Browsers warn on non-trusted certificates, but if by ignoring the warning, it is possible to access the farm via HTTPS.
+If you don't want to acquire domain (can always do this later), you can secure the farm with self-signed certificates. Browsers warn on non-trusted certificates, but by ignoring the warning, it is possible to access the farm via HTTPS.
 
 Create self-signed certificates with ```openssl``` tool.
 
