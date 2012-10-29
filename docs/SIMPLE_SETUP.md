@@ -66,7 +66,7 @@ Each farm in the cluster should have a branch in the cluster repository. ```mast
 
 ### Setup cluster repository
 
-For cluster repository template https://github.com/anodejs/sample-cluster into [your github organization](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#setup-github-organization). Rename it ```cluster``` (in ```Admin``` section).
+For cluster repository template https://github.com/anodejs/sample-cluster into [your github organization](https://github.com/anodejs/anodejs/blob/master/docs/SIMPLE_SETUP.md#setup-github-organization). Rename it ```cluster``` (see Admin tab).
 
 If you pay github for more advanced plan convert the cluster repository to private. If you have only free github plan, you will have to recreate cluster repository, later, on bitbucket.
 
