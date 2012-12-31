@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ServiceConfiguration serviceName="anode" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="2" osVersion="*">
+<ServiceConfiguration serviceName="anode" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="2" osVersion="*" schemaVersion="2012-10.1.8">
   <Role name="anodejsrole">
-    <Instances count="1" />
+    <Instances count="2" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="admin" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBMwYJKoZIhvcNAQcDoIIBJDCCASACAQAxgeUwgeICAQAwSzA+MQswCQYDVQQGEwJJTDELMAkGA1UECBMCSUwxDjAMBgNVBAoTBUFOT0RFMRIwEAYDVQQDEwlSRFBGT1JBTEwCCQDEGxiyuavcEzANBgkqhkiG9w0BAQEFAASBgNn4A9/3OfWlOXcCAcY8GD3c55ijP8YlD5BeFypcoVyTv1OzQIzwWgAbaVoUZaC4hsizatkHUlpH/S94Fw+ZyvPfxieHxHGAcrH8Vjurx0YexUsd48+1T5TAkJPaqiEHlTkxKsFKAGRqJBxSAyet/c/110R63RFTbXP1dsnSKJOBMDMGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIxnPHbHC46m+AEGXFTStkS9UAYtyWrIrhL3k=" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2022-12-06T23:59:59.0000000+02:00" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
       <Setting name="Git.user" value="myanodebuddy" />
       <Setting name="Git.password" value="" />
       <Setting name="Bootstrap.Origin" value="github.com/myanodeorg/bootstrap" />
       <Setting name="Bootstrap.Branch" value="master" />
       <Setting name="System.url" value="https://github.com/myanodeorg/system" />
       <Setting name="Farm.url" value="https://bitbucket.org/myanodeorg/cluster#farm" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="False" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="admin" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBMwYJKoZIhvcNAQcDoIIBJDCCASACAQAxgeUwgeICAQAwSzA+MQswCQYDVQQGEwJJTDELMAkGA1UECBMCSUwxDjAMBgNVBAoTBUFOT0RFMRIwEAYDVQQDEwlSRFBGT1JBTEwCCQDEGxiyuavcEzANBgkqhkiG9w0BAQEFAASBgGn/CnX1vBS7JGKsSFOU+hvVugZ2Pp5YZMywmWqasl6Ih5NGRznoo+XhNRXdGuIX8WifGqQ1scJ/mX2HwORZWSWceKsumtU+WJaxwTzXusxao53cOKO3Xg5X7h1r0F1TZKu2xhNNjMrMSVAXLNf8DtiffnfD0oOsBBkFOY1ZoSauMDMGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIo4FrTOGN0fWAEMPAcm5NYVY+eRt3St6cj8Y=" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2013-12-31T23:59:59.0000000+02:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="False" />
     </ConfigurationSettings>
     <Certificates>
       <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="6FF891B8535F70B918F52B8748630B877CA5CD10" thumbprintAlgorithm="sha1" />

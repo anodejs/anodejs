@@ -109,7 +109,7 @@ Modify the template with appropriate settings. The template looks like:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<ServiceConfiguration serviceName="anode" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="2" osVersion="*">
+<ServiceConfiguration serviceName="anode" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="2" osVersion="*" schemaVersion="2012-10.1.8">
   <Role name="anodejsrole">
     <Instances count="2" />
     <ConfigurationSettings>
