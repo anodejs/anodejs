@@ -10,7 +10,7 @@ In addition, access to restricted (aka private) applications will be granted onl
 
 ## Ensure cluster repository is private
 
-If you've created public cluster repository, you to recreate it again as private. Follow [these steps](https://github.com/anodejs/anodejs/blob/master/docs/BITBUCKET_SETUP.md) to setup bitbucket and to host private cluster repository there.
+If you've created public cluster repository, you have to recreate it again as private. Follow [these steps](https://github.com/anodejs/anodejs/blob/master/docs/BITBUCKET_SETUP.md) to setup bitbucket and to host private cluster repository there.
 
 ## Obtain domain name and server certificate
 
